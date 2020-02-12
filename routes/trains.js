@@ -4,13 +4,13 @@ const axios = require('axios');
 
 const GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 
-const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=16`;
+const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=1`;
 
 const router = require("express").Router();
 
 const Station = require('../database/models/Stations')
 
-const getTrainTimes = async (stopId) => {
+const getTrainTimes = async (request) => {
     let { data } = await axios.request({
         method: "GET",
         url: `${apiURL}`,
@@ -38,25 +38,24 @@ const getTrainTimes = async (stopId) => {
             } = entity;
             stopTimeUpdate.map(stopUpdate => {
                 let { arrival, stopId } = stopUpdate;
-                if (stopId.includes("N06")){
+                if (stopId.includes(request)) {
                     let currentTime = Date.now();
                     let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
-
                     response.push({
                         routeId,
                         stopId,
-                        arrival : arrivalTime.toFixed(0) + "Mins"
+                        arrival: arrivalTime.toFixed(0) + "Mins"
                     })
                 }
-
             })
         }
     })
     return response;
 }
 
-router.get('/', async (req, res, next) => {
-    let feed = await getTrainTimes();
+router.get('/:stopId', async (req, res, next) => {
+    let request = req.params.stopId;
+    let feed = await getTrainTimes(request);
     res.status(200).send(feed)
 })
 
