@@ -7,6 +7,11 @@ module.exports = db.define('Stations', {
         allowNull: false,
         required: true
     },
+    stopId: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        required: true
+    },
     line : {
         type: Sequelize.STRING,
         allowNull: false,
