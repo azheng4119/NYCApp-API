@@ -8,16 +8,23 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 
-const db = require('./database/db');
+const db = require('./database/index');
 
-try {
-  db.authenticate();
-  console.log('Connection has been established successfully.');
-} catch (error) {
-  console.error('Unable to connect to the database:', error);
-}
+// try {
+//   db.authenticate();
+//   console.log('Connection has been established successfully.');
+// } catch (error) {
+//   console.error('Unable to connect to the database:', error);
+// }
+// db.sync({
+//   force:false,
+// })
 
 var app = express();
+
+//SEED STATIONS
+// const favorite = require('./routes/favorites')
+// favorite();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
