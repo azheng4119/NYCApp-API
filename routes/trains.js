@@ -83,7 +83,7 @@ const getFeedNumber = async (stopId) => {
     }
     catch(error){
         console.log(error);
-        return feedIds;
+        return FeedIds;
     }
 }
 router.get('/:stopId', async (req, res, next) => {
