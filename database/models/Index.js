@@ -1,8 +1,8 @@
 const Favorites = require('./Favorites')
 const Feeds = require('./Feeds')
-const Stations = require('./Stations')
+const Station = require('./Station')
 module.exports = {
     Favorites,
     Feeds,
-    Stations
+    Station
 };

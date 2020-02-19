@@ -8,7 +8,7 @@ const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&
 
 const router = require("express").Router();
 
-const Station = require('../database/models/Stations')
+const Station = require('../database/models/Station')
 
 const Feed = require('../database/models/Feeds')
 
