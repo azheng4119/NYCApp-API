@@ -84,10 +84,10 @@ router.get('/:stopId', async (req, res, next) => {
     let stopId = req.params.stopId;
     let feedNumber = await getFeedNumber(stopId);
     let response = {};
-    for (let feedId of feedNumber) {
-        response[feedId] = await getTrainTimes(stopId, feedId);
-    }
-    res.status(200).send(response);
+    // for (let feedId of feedNumber) {
+    //     response[feedId] = await getTrainTimes(stopId, feedId);
+    // }
+    res.status(200).send(feedNumber);
 
 })
 
