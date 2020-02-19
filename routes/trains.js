@@ -61,15 +61,15 @@ const getTrainTimes = async (stop, feed) => {
 }
 
 const getFeedNumber = async (stopId) => {
+    let FeedIds = new Set();
     try {
-        let { dayTimeRoutes } = await Station.findAll({
+        let { daytimeRoutes } = await Station.findAll({
             where: {
                 stopId
             }
         }).then(data => data[0] || { dayTimeRoutes: false })
-        let FeedIds = new Set();
-        if (dayTimeRoutes) {
-            let routes = dayTimeRoutes.split(" ");
+        if (daytimeRoutes) {
+            let routes = daytimeRoutes.split(" ");
             for (let route of routes) {
                 let { feedId } = await Feed.findOne({
                     where: {
@@ -83,17 +83,17 @@ const getFeedNumber = async (stopId) => {
     }
     catch(error){
         console.log(error);
-        return new Set();
+        return feedIds;
     }
 }
 router.get('/:stopId', async (req, res, next) => {
     let stopId = req.params.stopId;
     let feedNumber = await getFeedNumber(stopId);
     let response = {};
-    // for (let feedId of feedNumber) {
-    //     response[feedId] = await getTrainTimes(stopId, feedId);
-    // }
-    res.status(200).send(feedNumber);
+    for (let feedId of feedNumber) {
+        response[feedId] = await getTrainTimes(stopId, feedId);
+    }
+    res.status(200).send(response);
 
 })
 
