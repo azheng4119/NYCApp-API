@@ -17,7 +17,7 @@ const db = require('./database/index');
 //   console.error('Unable to connect to the database:', error);
 // }
 // db.sync({
-//   force:false,
+//   force:true,
 // })
 
 var app = express();
