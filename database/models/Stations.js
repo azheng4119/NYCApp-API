@@ -37,7 +37,7 @@ module.exports = db.define('Stations', {
         allowNull: false,
         required: true
     },
-    dayTimeRoutes : {
+    daytimeRoutes : {
         type: Sequelize.STRING,
         allowNull: false,
         required: true
