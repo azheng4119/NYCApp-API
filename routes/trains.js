@@ -4,16 +4,18 @@ const axios = require('axios');
 
 const GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 
-const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=16`;
+const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=1`;
 
 const router = require("express").Router();
 
 const Station = require('../database/models/Stations')
 
-const getTrainTimes = async (stopId) => {
+const Feed = require('../database/models/Feeds')
+
+const getTrainTimes = async (stop, feed) => {
     let { data } = await axios.request({
         method: "GET",
-        url: `${apiURL}`,
+        url: `${apiURL}${feed}`,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Credentials": true,
@@ -24,9 +26,9 @@ const getTrainTimes = async (stopId) => {
     })
     const typedArray = new Uint8Array(data);
     const body = [...typedArray];
-    let feed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
+    let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
     let response = [];
-    feed.entity.map(entity => {
+    mtaFeed.entity.map(entity => {
         if (entity.tripUpdate) {
             let {
                 tripUpdate: {
@@ -38,26 +40,53 @@ const getTrainTimes = async (stopId) => {
             } = entity;
             stopTimeUpdate.map(stopUpdate => {
                 let { arrival, stopId } = stopUpdate;
-                if (stopId.includes("N06")){
+                if (stopId.includes(stop)) {
                     let currentTime = Date.now();
                     let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
-
                     response.push({
                         routeId,
                         stopId,
-                        arrival : arrivalTime.toFixed(0) + "Mins"
+                        arrival: arrivalTime.toFixed(0) + "Mins"
                     })
                 }
-
             })
         }
     })
     return response;
 }
 
-router.get('/', async (req, res, next) => {
-    let feed = await getTrainTimes();
-    res.status(200).send(feed)
+const getFeedNumber = async (stopId) => {
+    let { dayTimeRoutes } = await Station.findAll({
+        where: {
+            stopId
+        }
+    }).then(data => data[0] || { dayTimeRoutes: false })
+
+    let FeedIds = [];
+    if (dayTimeRoutes) {
+        let routes = dayTimeRoutes.split(" ");
+        for (let route of routes){
+            let { feedId } = await Feed.findOne({
+                where: {
+                    trainId: route
+                }
+            }).then(data => data)
+            FeedIds.push(feedId);
+        }
+    }
+    return FeedIds;
+}
+router.get('/:stopId', async (req, res, next) => {
+    let stopId = req.params.stopId;
+    let feedNumber = await getFeedNumber(stopId);
+    res.send(feedNumber)
+    // if (feedNumber) {
+    //     let feed = await getTrainTimes(stopId, feedNumber);
+    //     res.status(200).send(feed)
+    // } else {
+    //     res.status(404).send("No train found");
+    // }
+
 })
 
 module.exports = router;
