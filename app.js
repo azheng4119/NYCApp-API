@@ -22,7 +22,7 @@ const db = require('./database/index');
 
 var app = express();
 
-//SEED STATIONS
+// SEED STATIONS
 // const favorite = require('./routes/favorites')
 // favorite();
 
