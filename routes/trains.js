@@ -13,46 +13,51 @@ const Station = require('../database/models/Stations')
 const Feed = require('../database/models/Feeds')
 
 const getTrainTimes = async (stop, feed) => {
-    let { data } = await axios.request({
-        method: "GET",
-        url: `${apiURL}${feed}`,
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Credentials": true,
-            "content-type": 'application/json'
-        },
-        responseType: 'arraybuffer',
-        responseEncoding: 'utf8'
-    })
-    const typedArray = new Uint8Array(data);
-    const body = [...typedArray];
-    let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
-    let response = [];
-    mtaFeed.entity.map(entity => {
-        if (entity.tripUpdate) {
-            let {
-                tripUpdate: {
-                    trip: {
-                        routeId
+    try {
+        let { data } = await axios.request({
+            method: "GET",
+            url: `${apiURL}${feed}`,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": true,
+                "content-type": 'application/json'
+            },
+            responseType: 'arraybuffer',
+            responseEncoding: 'utf8'
+        })
+        const typedArray = new Uint8Array(data);
+        const body = [...typedArray];
+        let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
+        let response = [];
+        mtaFeed.entity.map(entity => {
+            if (entity.tripUpdate) {
+                let {
+                    tripUpdate: {
+                        trip: {
+                            routeId
+                        },
+                        stopTimeUpdate
                     },
-                    stopTimeUpdate
-                },
-            } = entity;
-            stopTimeUpdate.map(stopUpdate => {
-                let { arrival, stopId } = stopUpdate;
-                if (stopId.includes(stop)) {
-                    let currentTime = Date.now();
-                    let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
-                    response.push({
-                        routeId,
-                        stopId,
-                        arrival: arrivalTime.toFixed(0) + "Mins"
-                    })
-                }
-            })
-        }
-    })
-    return response;
+                } = entity;
+                stopTimeUpdate.map(stopUpdate => {
+                    let { arrival, stopId } = stopUpdate;
+                    if (stopId.includes(stop)) {
+                        let currentTime = Date.now();
+                        let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
+                        response.push({
+                            routeId,
+                            stopId,
+                            arrival: arrivalTime.toFixed(0) + "Mins"
+                        })
+                    }
+                })
+            }
+        })
+        return response;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
 }
 
 const getFeedNumber = async (stopId) => {
