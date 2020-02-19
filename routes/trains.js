@@ -4,7 +4,7 @@ const axios = require('axios');
 
 const GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 
-const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=1`;
+const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=`;
 
 const router = require("express").Router();
 
@@ -61,17 +61,16 @@ const getFeedNumber = async (stopId) => {
             stopId
         }
     }).then(data => data[0] || { dayTimeRoutes: false })
-
-    let FeedIds = [];
+    let FeedIds = new Set();
     if (dayTimeRoutes) {
         let routes = dayTimeRoutes.split(" ");
-        for (let route of routes){
+        for (let route of routes) {
             let { feedId } = await Feed.findOne({
                 where: {
                     trainId: route
                 }
             }).then(data => data)
-            FeedIds.push(feedId);
+            FeedIds.add(feedId);
         }
     }
     return FeedIds;
@@ -79,13 +78,11 @@ const getFeedNumber = async (stopId) => {
 router.get('/:stopId', async (req, res, next) => {
     let stopId = req.params.stopId;
     let feedNumber = await getFeedNumber(stopId);
-    res.send(feedNumber)
-    // if (feedNumber) {
-    //     let feed = await getTrainTimes(stopId, feedNumber);
-    //     res.status(200).send(feed)
-    // } else {
-    //     res.status(404).send("No train found");
-    // }
+    let response = {};
+    for (let feedId of feedNumber) {
+        response[feedId] = await getTrainTimes(stopId, feedId);
+    }
+    res.status(200).send(response);
 
 })
 
