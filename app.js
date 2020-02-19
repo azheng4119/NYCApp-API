@@ -7,9 +7,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-
-const db = require('./database/index');
-
 // try {
 //   db.authenticate();
 //   console.log('Connection has been established successfully.');
