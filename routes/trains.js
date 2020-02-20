@@ -41,7 +41,7 @@ const getTrainTimes = async (stop, feed) => {
                 } = entity;
                 stopTimeUpdate.map(stopUpdate => {
                     let { arrival, stopId } = stopUpdate;
-                    if (stopId.includes(stop)) {
+                    if (stopId.includes(stop) && arrival) {
                         let currentTime = Date.now();
                         let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
                         response.push({
@@ -61,34 +61,40 @@ const getTrainTimes = async (stop, feed) => {
 }
 
 const getFeedNumber = async (stopId) => {
-    let { dayTimeRoutes } = await Station.findAll({
-        where: {
-            stopId
-        }
-    }).then(data => data[0] || { dayTimeRoutes: false })
     let FeedIds = new Set();
-    if (dayTimeRoutes) {
-        let routes = dayTimeRoutes.split(" ");
-        for (let route of routes) {
-            let { feedId } = await Feed.findOne({
-                where: {
-                    trainId: route
-                }
-            }).then(data => data)
-            FeedIds.add(feedId);
+    try {
+        let { dayTimeRoutes } = await Station.findAll({
+            where: {
+                stopId
+            }
+        }).then(data => data[0] || { dayTimeRoutes: false })
+        if (dayTimeRoutes) {
+            let routes = dayTimeRoutes.split(" ");
+            for (let route of routes) {
+                let { feedId } = await Feed.findOne({
+                    where: {
+                        trainId: route
+                    }
+                }).then(data => data)
+                FeedIds.add(feedId);
+            }
         }
+        return FeedIds;
     }
-    return FeedIds;
+    catch (error) {
+        console.log(error);
+        return FeedIds;
+    }
 }
+
 router.get('/:stopId', async (req, res, next) => {
     let stopId = req.params.stopId;
     let feedNumber = await getFeedNumber(stopId);
     let response = {};
     for (let feedId of feedNumber) {
-        response[feedId] = await getTrainTimes(stopId, feedId);
+        response[feedId] = await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e));
     }
-    res.status(200).send(response);
-
+    res.status(200).send(response)
 })
 
 module.exports = router;
