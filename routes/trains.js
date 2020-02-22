@@ -29,6 +29,7 @@ const getTrainTimes = async (stop, feed) => {
         const body = [...typedArray];
         let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
         let response = [];
+        console.log(mtaFeed["header"]["timestamp"]);
         mtaFeed.entity.map(entity => {
             if (entity.tripUpdate) {
                 let {
@@ -44,7 +45,7 @@ const getTrainTimes = async (stop, feed) => {
                     if (stopId.includes(stop) && arrival) {
                         let currentTime = Date.now();
                         let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
-                        response.push({
+                        if (arrivalTime >= 0) response.push({
                             routeId,
                             stopId,
                             arrival: arrivalTime.toFixed(0) + "Mins"
