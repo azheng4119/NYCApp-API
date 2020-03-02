@@ -28,7 +28,7 @@ const getTrainTimes = async (stop, feed) => {
         const typedArray = new Uint8Array(data);
         const body = [...typedArray];
         let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
-        let response = [];
+        let response = {};
         console.log(mtaFeed["header"]["timestamp"]);
         mtaFeed.entity.map(entity => {
             if (entity.tripUpdate) {
@@ -45,11 +45,17 @@ const getTrainTimes = async (stop, feed) => {
                     if (stopId.includes(stop) && arrival) {
                         let currentTime = Date.now();
                         let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
-                        if (arrivalTime >= 0) response.push({
-                            routeId,
-                            stopId,
-                            arrival: arrivalTime.toFixed(0) + "Mins"
-                        })
+                        let side = stopId[stopId.length - 1] === 'N' ? "North" : "South";
+                        if (arrivalTime >= 0) {
+                            if (!(routeId in response)) {
+                                response[routeId] = {
+                                    TrainNumber : routeId,
+                                    North: [],
+                                    South: [],
+                                };
+                            }
+                            response[routeId][side].push(arrivalTime.toFixed(0));
+                        }
                     }
                 })
             }
@@ -91,9 +97,9 @@ const getFeedNumber = async (stopId) => {
 router.get('/:stopId', async (req, res, next) => {
     let stopId = req.params.stopId;
     let feedNumber = await getFeedNumber(stopId);
-    let response = {};
+    let response = [];
     for (let feedId of feedNumber) {
-        response[feedId] = await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e));
+        response.push(await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e)));
     }
     res.status(200).send(response)
 })
