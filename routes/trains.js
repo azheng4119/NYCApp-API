@@ -49,7 +49,7 @@ const getTrainTimes = async (stop, feed) => {
                         if (arrivalTime >= 0) {
                             if (!(routeId in response)) {
                                 response[routeId] = {
-                                    TrainNumber : routeId,
+                                    TrainNumber: routeId,
                                     North: [],
                                     South: [],
                                 };
@@ -67,12 +67,13 @@ const getTrainTimes = async (stop, feed) => {
     }
 }
 
-const getFeedNumber = async (stopId) => {
+const getFeedNumber = async (stopName) => {
     let FeedIds = new Set();
+    let stopId = "";
     try {
-        let { dayTimeRoutes } = await Station.findAll({
+        let { dayTimeRoutes, stopId } = await Station.findAll({
             where: {
-                stopId
+                stopName
             }
         }).then(data => data[0] || { dayTimeRoutes: false })
         if (dayTimeRoutes) {
@@ -86,22 +87,26 @@ const getFeedNumber = async (stopId) => {
                 FeedIds.add(feedId);
             }
         }
-        return FeedIds;
+        return [FeedIds, stopId];
     }
     catch (error) {
         console.log(error);
-        return FeedIds;
+        return [FeedIds, stopId];
     }
 }
 
-router.get('/:stopId', async (req, res, next) => {
-    let stopId = req.params.stopId;
-    let feedNumber = await getFeedNumber(stopId);
+router.get('/:stopName', async (req, res, next) => {
+    let stopName = req.params.stopName;
+    let [feedNumber, stopId] = await getFeedNumber(stopName);
     let response = [];
-    for (let feedId of feedNumber) {
-        response.push(await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e)));
+    if (response) {
+        for (let feedId of feedNumber) {
+            response.push(await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e)));
+        }
+        res.status(200).send(response)
+    }else{
+        res.status(400).send(response)
     }
-    res.status(200).send(response)
 })
 
 module.exports = router;
