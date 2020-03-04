@@ -105,7 +105,8 @@ router.get('/:stopName', async (req, res, next) => {
         for (let feedId of feedNumber) {
             response.push(await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e)));
         }
-        res.status(200).send(response)
+        let response2 = response.map(trainData => Object.values(trainData));
+        res.status(200).send(...response2);
     } else {
         res.status(400).send(response)
     }
@@ -168,6 +169,7 @@ router.get('/:latitude/:longitude', async (req, res, next) => {
 
     let sorted = await data.sort((a, b) => haversine(latitude, a.latitude, longitude, a.longitude) - haversine(latitude, b.latitude, longitude, b.longitude));
     res.status(200).send(sorted.splice(0,5))
+
 
 });
 module.exports = router;
