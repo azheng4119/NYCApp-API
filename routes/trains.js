@@ -18,8 +18,10 @@ const fs = require('fs');
 
 const feedArray = [1, 2, 16, 21, 26, 31, 36, 51];
 
+
 const getTrainTimes = async (stop, feed) => {
     try {
+
         let { data } = await axios.request({
             method: "GET",
             url: `${apiURL}${feed}`,
@@ -34,6 +36,8 @@ const getTrainTimes = async (stop, feed) => {
         const typedArray = new Uint8Array(data);
         const body = [...typedArray];
         let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
+        if (!mtaFeed) mtaFeed = JSON.parse(await fs.readFileSync(`./caches/cacheFor${feed}.txt`).toString());
+        // const headerTime = mtaFeed.header.timestamp * 1000;
         let response = {};
         mtaFeed.entity.map(entity => {
             if (entity.tripUpdate) {
@@ -45,11 +49,12 @@ const getTrainTimes = async (stop, feed) => {
                         stopTimeUpdate
                     },
                 } = entity;
-                stopTimeUpdate.map(stopUpdate => {
+                if (stopTimeUpdate) stopTimeUpdate.map(stopUpdate => {
                     let { arrival, stopId } = stopUpdate;
                     if (stopId.includes(stop) && arrival) {
                         let currentTime = Date.now();
-                        let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000 || (arrival.time * 1000 - currentTime) / 60000;
+                        let predictedTime = arrival.time.low || arrival.time;
+                        let arrivalTime = (predictedTime * 1000 - currentTime) / 60000;
                         let side = stopId[stopId.length - 1] === 'N' ? "North" : "South";
                         if (arrivalTime >= 0) {
                             if (!(routeId in response)) {
@@ -168,7 +173,8 @@ router.get('/cache/now', async (req, res, next) => {
         res.status(200).send('Cached')
     }
     catch (error) {
-        res.status(400).send()
+        console.log(error)
+        res.status(400).send('none')
     }
 
 })
