@@ -14,6 +14,10 @@ const Feed = require('../database/models/Feeds')
 
 const { Op } = require("sequelize");
 
+const fs = require('fs');
+
+const feedArray = [1, 2, 16, 21, 26, 31, 36, 51];
+
 const getTrainTimes = async (stop, feed) => {
     try {
         let { data } = await axios.request({
@@ -31,7 +35,6 @@ const getTrainTimes = async (stop, feed) => {
         const body = [...typedArray];
         let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
         let response = {};
-        console.log(mtaFeed["header"]["timestamp"]);
         mtaFeed.entity.map(entity => {
             if (entity.tripUpdate) {
                 let {
@@ -46,7 +49,7 @@ const getTrainTimes = async (stop, feed) => {
                     let { arrival, stopId } = stopUpdate;
                     if (stopId.includes(stop) && arrival) {
                         let currentTime = Date.now();
-                        let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000;
+                        let arrivalTime = (arrival.time.low * 1000 - currentTime) / 60000 || (arrival.time * 1000 - currentTime) / 60000;
                         let side = stopId[stopId.length - 1] === 'N' ? "North" : "South";
                         if (arrivalTime >= 0) {
                             if (!(routeId in response)) {
@@ -67,6 +70,13 @@ const getTrainTimes = async (stop, feed) => {
         console.log(error);
         return [];
     }
+}
+
+const createFile = (feedId, content) => {
+    fs.writeFile(`./caches/cacheFor${feedId}.txt`, JSON.stringify(content), function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+    });
 }
 
 const getFeedNumber = async (stopName) => {
@@ -134,6 +144,35 @@ function haversine(lat1, lat2, lon1, lon2) {
     return d;
 }
 
+router.get('/cache/now', async (req, res, next) => {
+    try {
+        for (let i = 0; i < feedArray.length; i++) {
+            let { data } = await axios.request({
+                method: "GET",
+                url: `${apiURL}${feedArray[i]}`,
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Credentials": true,
+                    "content-type": 'application/json'
+                },
+                responseType: 'arraybuffer',
+                responseEncoding: 'utf8'
+            })
+            const typedArray = new Uint8Array(data);
+            const body = [...typedArray];
+            let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
+            createFile(feedArray[i], mtaFeed);
+            // await fs.readFile('./cacheFor36.txt', (err, data) => data ? mtaFeed = JSON.parse(data.toString()) : console.log(err));
+            // let mtaFeed = JSON.parse(await fs.readFileSync('./cacheFor36.txt').toString());
+        }
+        res.status(200).send('Cached')
+    }
+    catch (error) {
+        res.status(400).send()
+    }
+
+})
+
 router.get('/:latitude/:longitude', async (req, res, next) => {
     let { latitude, longitude } = req.params;
     distance = 1 / 6371;
@@ -168,7 +207,7 @@ router.get('/:latitude/:longitude', async (req, res, next) => {
     });
 
     let sorted = await data.sort((a, b) => haversine(latitude, a.latitude, longitude, a.longitude) - haversine(latitude, b.latitude, longitude, b.longitude));
-    res.status(200).send(sorted.splice(0,5))
+    res.status(200).send(sorted.splice(0, 5))
 
 
 });
