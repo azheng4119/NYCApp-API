@@ -9,18 +9,18 @@ export const Favorites = ({ navigation }) => {
 
     const [favorites, setFavorites] = useState([]);
 
-    // const getFavorites = async () => {
-    //     try {
-    //         const value = await AsyncStorage.getItem('@Favorites');
-    //         if (value !== null) {
-    //             return JSON.parse(value);
-    //         } else {
-    //             return [];
-    //         }
-    //     } catch (e) {
-    //         return [];
-    //     }
-    // };
+    const getFavorites = async () => {
+        try {
+            const value = await AsyncStorage.getItem('@Favorites');
+            if (value !== null) {
+                return JSON.parse(value);
+            } else {
+                return [];
+            }
+        } catch (e) {
+            return [];
+        }
+    };
 
     useEffect(() => {
         setFavorites([{
