@@ -6,6 +6,8 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
+    "AsyncStorage": "^0.1.5",
     "axios": "^0.19.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
