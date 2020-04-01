@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, ScrollView } from 'react-native';
 import { ListItem } from 'react-native-elements';
+import { NavigationEvents } from 'react-navigation';
 import axios from 'axios';
 import Images from '../assets/images';
 import Loading from '../components/Loading';
@@ -11,15 +12,15 @@ export default function HomeScreen({
 }) {
   const [nearBy, setNearBy] = useState([]);
 
-  useEffect(() => {
-    const unsubscribe = navigation.addListener('tabPress', e => {
+  // useEffect(() => {
+  //   const unsubscribe = navigation.addListener('focus', e => {
 
-      alert('Changed');
+  //     alert('Changed');
 
-    });
+  //   });
 
-    return unsubscribe;
-  }, [navigation]);
+  //   return unsubscribe;
+  // }, [navigation]);
 
   useEffect(() => {
     getNearBy();
@@ -54,7 +55,7 @@ export default function HomeScreen({
 
   return (
     <View style={styles.Container}>
-      <Favorites navigation={navigation.navigate} />
+      <Favorites navigation={navigation} />
       <View style={styles.SubContainer} >
         <ListItem
           title={'Nearby'}
