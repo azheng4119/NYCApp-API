@@ -12,7 +12,6 @@ export const Favorites = ({ navigation }) => {
     const getFavorites = async () => {
         try {
             const value = await AsyncStorage.getAllKeys();
-            console.log(value)
             if (value !== null) {
                 return setFavorites(value.map(station => station.includes('&') ? station.split('&')[1] : ''));
             } else {
