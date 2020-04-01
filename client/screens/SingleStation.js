@@ -39,7 +39,7 @@ export default function SingleStation({
 
 	const deleteFavorite = async () => {
 		try {
-			await AsyncStorage.removeItem(`@${route.params?.station}`);
+			await AsyncStorage.removeItem(`&${route.params?.station}`);
 			setFavorite(false);
 		} catch (e) {
 			// saving error
