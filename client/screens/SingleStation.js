@@ -14,31 +14,53 @@ export default function SingleStation({
 
 
 	const getFavorites = async () => {
+		console.log(favorite)
 		try {
-			const value = await AsyncStorage.getItem('@Favorites')
+			const value = await AsyncStorage.getItem(`&${route.params?.station}`)
+			console.log(value);
 			if (value !== null) {
-				setFavorite(value.includes(route.params?.station));
+				setFavorite(true);
+			}else{
+				setFavorite(false);
 			}
 		} catch (e) {
 			// error reading value
 		}
 	}
 
-	const storeData = async (trainStop) => {
+	const saveFavorite = async () => {
 		try {
-			await AsyncStorage.setItem('@storage_Key', JSON.stringify(trainStop))
+			await AsyncStorage.setItem(`&${route.params?.station}`, `${route.params?.station}`)
+			setFavorite(true);
 		} catch (e) {
 			// saving error
 		}
 	}
 
+	const deleteFavorite = async () =>{
+		try {
+			await AsyncStorage.removeItem(`@${route.params?.station}`);
+			setFavorite(false);
+		} catch (e) {
+			// saving error
+		}
+	}
+
+	const handleClick = () => {
+		if (favorite){
+			deleteFavorite();
+		}else{
+			saveFavorite();
+			
+		}
+	}
 	useEffect(() => {
 		navigation.setOptions({ title: route.params?.station });
 		getTrainTimes();
 		getFavorites();
 	}, [route.params?.station]);
 
-	getTrainTimes = async () => {
+	const getTrainTimes = async () => {
 		let { data } = await axios.get(`http://node-express-env.hfrpwhjwwy.us-east-2.elasticbeanstalk.com/trains/${route.params?.station}`);
 		setData(data);
 	}
@@ -46,7 +68,7 @@ export default function SingleStation({
 	return (
 		<ScrollView>
 			<TouchableOpacity
-				onPress={()=>console.log(`hello`)}
+				onPress={()=>handleClick()}
 			>
 				<Text>
 					{favorite ? "Favorite" : "Not Favorite"}

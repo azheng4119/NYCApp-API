@@ -11,9 +11,10 @@ export const Favorites = ({ navigation }) => {
 
     const getFavorites = async () => {
         try {
-            const value = await AsyncStorage.getItem('@Favorites');
+            const value = await AsyncStorage.getAllKeys();
+            console.log(value)
             if (value !== null) {
-                return JSON.parse(value);
+                return setFavorites(value.map(station => station.includes('&') ? station.split('&')[1] : ''));
             } else {
                 return ['No Favorites set'];
             }
@@ -24,11 +25,7 @@ export const Favorites = ({ navigation }) => {
 
     useEffect(() => {
         async function fetchData() {
-            setFavorites(await getFavorites());
-            // setFavorites([{
-            //     stopName: '71 St',
-            //     dayTimeRoutes: 'D'
-            // }])
+            getFavorites();
         }
         fetchData();
     }, [])
@@ -48,24 +45,24 @@ export const Favorites = ({ navigation }) => {
                         />
                     }
                     else {
-                        let allTrainImages = [];
-                        for (let train of station["dayTimeRoutes"].split(' ')) {
-                            allTrainImages.push(
-                                <Image key={train} source={Images[train]} style={styles.Avatar} />
-                            )
-                        }
+                        // let allTrainImages = [];
+                        // for (let train of station["dayTimeRoutes"].split(' ')) {
+                        //     allTrainImages.push(
+                        //         <Image key={train} source={Images[train]} style={styles.Avatar} />
+                        //     )
+                        // }
                         return (
                             <ListItem
                                 onPress={() =>
-                                    navigation('Train', { screen: 'SingleStation', params: { station: station['stopName'] } })
+                                    navigation('Train', { screen: 'SingleStation', params: { station: station } })
                                 }
                                 key={i}
                                 leftAvatar={
                                     <View style={styles.ListItem}>
-                                        {allTrainImages}
+                                        {/* {allTrainImages} */}
                                     </View>
                                 }
-                                title={station['stopName']}
+                                title={station}
                                 titleStyle={styles.ListItemTitle}
                                 bottomDivider
                             />
