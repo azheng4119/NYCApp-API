@@ -8,7 +8,7 @@ import HomeScreen from '../screens/HomeScreen'
 import AllTrains from '../screens/AllTrains';
 import SingleTrain from '../screens/SingleTrain';
 import SingleStation from '../screens/SingleStation';
-import Lottie from '../components/Loading';
+import NearByMap from '../screens/NearByMap';
 
 export default function App() {
   const INITIAL_ROUTE_NAME = 'Home';
@@ -115,7 +115,7 @@ export default function App() {
       />
       <MyTabs.Screen
         name="Map"
-        component={Lottie}
+        component={NearByMap}
         options={{
           title: 'Resources',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-navigate" />,
