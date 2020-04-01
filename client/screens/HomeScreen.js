@@ -43,7 +43,7 @@ export default function HomeScreen({
 
   return (
     <View style={styles.Container}>
-      <Favorites navigation={navigation} />
+      <Favorites navigation={navigation.navigate} />
       <View style={styles.SubContainer} >
         <ListItem
           title={'Nearby'}
@@ -91,13 +91,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly"
   },
   SubContainer: {
-    height: 210.9,
     marginTop: 10,
     marginLeft: 10,
     marginRight: 10,
   },
   Loading: {
-    height: 158.2,
     backgroundColor: 'white'
   },
   ListItem: {
