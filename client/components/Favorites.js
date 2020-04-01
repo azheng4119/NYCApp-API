@@ -23,11 +23,16 @@ export const Favorites = ({ navigation }) => {
     };
 
     useEffect(() => {
-        async function fetchData() {
-            getFavorites();
-        }
-        fetchData();
-    }, [favorites])
+        const unsubscribe = navigation.addListener('focus', e => {
+
+            async function fetchData() {
+                getFavorites();
+            }
+            fetchData();
+        });
+        return unsubscribe;
+    }, [navigation]);
+
 
     return <View style={styles.SubContainer} >
         <ListItem
@@ -53,7 +58,7 @@ export const Favorites = ({ navigation }) => {
                         return (
                             <ListItem
                                 onPress={() => {
-                                    navigation('Single', { station: station } )
+                                    navigation.navigate('Single', { station: station })
                                 }
                                 }
                                 key={i}
@@ -85,7 +90,9 @@ const styles = StyleSheet.create({
         justifyContent: "space-evenly"
     },
     SubContainer: {
-
+        marginTop: 10,
+        marginLeft: 10,
+        marginRight: 10,
     },
     Loading: {
         backgroundColor: 'white'
