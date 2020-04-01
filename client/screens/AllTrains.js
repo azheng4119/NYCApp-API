@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image, StyleSheet, ScrollView } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import Images from '../assets/images';
 
 export default function AllTrains({
-	navigation
+	navigation,
+	route,
 }) {
+
 	const trains = ["1", "2", "3", "4", "5", "6", "7", "A", "B", "C", "D", "E", "F", "G", "J", "M", "N", "Q", "R", "S", "W", "Z"]
 	return (
 		<ScrollView>
@@ -24,7 +26,7 @@ export default function AllTrains({
 
 const styles = StyleSheet.create({
 	Avatar: {
-		height: 40, 
+		height: 40,
 		width: 40,
 	},
 });

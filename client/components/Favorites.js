@@ -53,8 +53,9 @@ export const Favorites = ({ navigation }) => {
                         // }
                         return (
                             <ListItem
-                                onPress={() =>
-                                    navigation('Train', { screen: 'SingleStation', params: { station: station } })
+                                onPress={() => {
+                                    navigation('Single', { station: station } )
+                                }
                                 }
                                 key={i}
                                 leftAvatar={
