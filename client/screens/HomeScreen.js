@@ -12,6 +12,16 @@ export default function HomeScreen({
   const [nearBy, setNearBy] = useState([]);
 
   useEffect(() => {
+    const unsubscribe = navigation.addListener('tabPress', e => {
+
+      alert('Changed');
+
+    });
+
+    return unsubscribe;
+  }, [navigation]);
+
+  useEffect(() => {
     getNearBy();
   }, []);
 
@@ -21,6 +31,7 @@ export default function HomeScreen({
         position => {
           const obj = JSON.stringify(position);
           const location = JSON.parse(obj);
+          console.log(location);
           const currLoc = { latitude: location[`coords`][`latitude`], longitude: location[`coords`][`longitude`] };
           searchOnCoords(currLoc);
         },
@@ -43,7 +54,7 @@ export default function HomeScreen({
 
   return (
     <View style={styles.Container}>
-      <Favorites navigation={navigation} />
+      <Favorites navigation={navigation.navigate} />
       <View style={styles.SubContainer} >
         <ListItem
           title={'Nearby'}
@@ -61,7 +72,7 @@ export default function HomeScreen({
               return (
                 <ListItem
                   onPress={() =>
-                    navigation.navigate('Train', { screen: 'SingleStation', params: { station: station["stopName"] } })}
+                    navigation.navigate('Single', { station: station["stopName"] } )}
                   key={i}
                   leftAvatar={
                     <View style={styles.ListItem}>
@@ -91,13 +102,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly"
   },
   SubContainer: {
-    height: 210.9,
     marginTop: 10,
     marginLeft: 10,
     marginRight: 10,
   },
   Loading: {
-    height: 158.2,
     backgroundColor: 'white'
   },
   ListItem: {

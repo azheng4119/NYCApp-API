@@ -11,60 +11,22 @@ import SingleStation from '../screens/SingleStation';
 import NearByMap from '../screens/NearByMap';
 
 export default function App() {
-  const INITIAL_ROUTE_NAME = 'Home';
-
-  function Home({ navigation }) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>her</Text>
-        <Button
-          title="Go to Wojciech's profile"
-          onPress={() =>
-            navigation.navigate("Home", { id: "Wojciech", age: 22 })
-          }
-        />
-        <Button
-          title="Go to unknown profile"
-          onPress={() => navigation.navigate("Profile")}
-        />
-      </View>
-    );
-  }
-
-  function Profile({ route }) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello {route.params?.id || "Unknown"}!</Text>
-        <Text>
-          Type of age parameter is{" "}
-          {route.params?.age ? typeof route.params.age : "undefined"}
-        </Text>
-      </View>
-    );
-  }
-
-  function Settings({ route, navigation }) {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Hello {route.params?.id || "Unknown"}!</Text>
-        <Text>
-          Type of age parameter is{" "}
-          {route.params?.age ? route.params.age : "undefined"}
-        </Text>
-      </View>
-    );
-  }
 
   const HomeStack = () => {
     const MyStack = createStackNavigator();
 
     return (
-      <MyStack.Navigator>
+      <MyStack.Navigator
+        initialRouteName="Home"
+      >
         <MyStack.Screen
           name="Home"
           component={HomeScreen}
         />
-        <MyStack.Screen name="Profile" component={Home} />
+        <MyStack.Screen
+          name="Single"
+          component={SingleStation}
+        />
       </MyStack.Navigator>
     );
   };
@@ -73,8 +35,8 @@ export default function App() {
     const MyStack = createStackNavigator();
 
     return (
-      <MyStack.Navigator 
-      initialRouteName="Trains"
+      <MyStack.Navigator
+        initialRouteName="Trains"
       >
         <MyStack.Screen
           name="Trains"
@@ -98,7 +60,7 @@ export default function App() {
       tabBarOptions={{ showLabel: false }}
     >
       <MyTabs.Screen
-        name="HomeStack"
+        name="Home"
         component={HomeStack}
         options={{
           title: 'Home',
@@ -119,10 +81,6 @@ export default function App() {
         options={{
           title: 'Resources',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-navigate" />,
-          tabBarOnPress: ({ navigation, defaultHandler }) => {
-            console.log('this will be fired just before nagivation happens')
-            defaultHandler() // if you omit this, navigation will not happen
-          }
         }}
       />
     </MyTabs.Navigator>

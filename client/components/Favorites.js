@@ -11,11 +11,12 @@ export const Favorites = ({ navigation }) => {
 
     const getFavorites = async () => {
         try {
-            const value = await AsyncStorage.getItem('@Favorites');
+            const value = await AsyncStorage.getAllKeys();
+            console.log(value)
             if (value !== null) {
-                return JSON.parse(value);
+                return setFavorites(value.map(station => station.includes('&') ? station.split('&')[1] : ''));
             } else {
-                return [];
+                return ['No Favorites set'];
             }
         } catch (e) {
             return [];
@@ -23,11 +24,12 @@ export const Favorites = ({ navigation }) => {
     };
 
     useEffect(() => {
-        setFavorites([{
-            stopName: '71 St',
-            dayTimeRoutes: 'D'
-        }])
+        async function fetchData() {
+            getFavorites();
+        }
+        fetchData();
     }, [])
+
     return <View style={styles.SubContainer} >
         <ListItem
             title={'Favorites'}
@@ -36,28 +38,37 @@ export const Favorites = ({ navigation }) => {
         <ScrollView>
             {favorites.length > 0 ?
                 favorites.map((station, i) => {
-                    let allTrainImages = [];
-                    for (let train of station["dayTimeRoutes"].split(' ')) {
-                        allTrainImages.push(
-                            <Image key={train} source={Images[train]} style={styles.Avatar} />
+                    if (station === 'No Favorites set') {
+                        return <ListItem
+                            key={i}
+                            title={station}
+                        />
+                    }
+                    else {
+                        // let allTrainImages = [];
+                        // for (let train of station["dayTimeRoutes"].split(' ')) {
+                        //     allTrainImages.push(
+                        //         <Image key={train} source={Images[train]} style={styles.Avatar} />
+                        //     )
+                        // }
+                        return (
+                            <ListItem
+                                onPress={() => {
+                                    navigation('Single', { station: station } )
+                                }
+                                }
+                                key={i}
+                                leftAvatar={
+                                    <View style={styles.ListItem}>
+                                        {/* {allTrainImages} */}
+                                    </View>
+                                }
+                                title={station}
+                                titleStyle={styles.ListItemTitle}
+                                bottomDivider
+                            />
                         )
                     }
-                    return (
-                        <ListItem
-                            onPress={() =>
-                                navigation.navigate('Train', { screen: 'SingleStation', params: { station: station['stopName'] } })
-                            }
-                            key={i}
-                            leftAvatar={
-                                <View style={styles.ListItem}>
-                                    {allTrainImages}
-                                </View>
-                            }
-                            title={station['stopName']}
-                            titleStyle={styles.ListItemTitle}
-                            bottomDivider
-                        />
-                    )
                 }) :
                 <View style={styles.Loading}>
                     <Loading />
@@ -75,13 +86,9 @@ const styles = StyleSheet.create({
         justifyContent: "space-evenly"
     },
     SubContainer: {
-        height: 210.9,
-        marginTop: 10,
-        marginLeft: 10,
-        marginRight: 10,
+
     },
     Loading: {
-        height: 158.2,
         backgroundColor: 'white'
     },
     ListItem: {
