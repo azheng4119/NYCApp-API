@@ -85,9 +85,8 @@ export default function NearByMap({
 							title={station.stopName}
 							description={station.dayTimeRoutes}>
 							<MapView.Callout
-								onPress={() =>
-									navigation.navigate('Train', { screen: 'SingleStation', params: { station: station.stopName } })}
-							/>
+								onPress={() => navigation.navigate('SingleStation', { station: station.stopName })}
+									/>
 						</MapView.Marker>
 					)
 				})}
@@ -117,7 +116,7 @@ const styles = StyleSheet.create({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: "center",
-		margin: 20,
+		margin: 10,
 		zIndex: 1,
 		width: 40,
 		height: 40,

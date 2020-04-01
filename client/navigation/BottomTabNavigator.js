@@ -51,8 +51,27 @@ export default function App() {
           component={SingleStation}
         />
       </MyStack.Navigator>
-    )
-  }
+    );
+  };
+
+  const MapStack = () => {
+    const MyStack = createStackNavigator();
+
+    return (
+      <MyStack.Navigator
+        initialRouteName="NearByMap"
+      >
+        <MyStack.Screen
+          name="NearByMap"
+          component={NearByMap}
+        />
+        <MyStack.Screen
+          name="SingleStation"
+          component={SingleStation}
+        />
+      </MyStack.Navigator>
+    );
+  };
 
   const MyTabs = createBottomTabNavigator();
   return (
@@ -77,7 +96,7 @@ export default function App() {
       />
       <MyTabs.Screen
         name="Map"
-        component={NearByMap}
+        component={MapStack}
         options={{
           title: 'Resources',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-navigate" />,
