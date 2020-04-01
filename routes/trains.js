@@ -113,17 +113,24 @@ const getFeedNumber = async (stopName) => {
 }
 
 router.get('/:stopName', async (req, res, next) => {
-    let stopName = req.params.stopName;
-    let [feedNumber, stopId] = await getFeedNumber(stopName);
-    let response = [];
-    if (response) {
-        for (let feedId of feedNumber) {
-            response.push(await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e)));
+    try {
+        let stopName = req.params.stopName;
+        let [feedNumber, stopId] = await getFeedNumber(stopName).catch(e => console.log(e));
+        let response = [];
+        if (response) {
+            for (let feedId of feedNumber) {
+                const trainTimes = await getTrainTimes(stopId, feedId).then(data => data).catch(e => console.log(e));
+                response.push(trainTimes);
+            }
+
+            let response2 = [];
+            response.map(trainData => response2.push(...Object.values(trainData)));
+            res.status(202).send(response2);
+        } else {
+            res.status(404).send(response)
         }
-        let response2 = response.map(trainData => Object.values(trainData));
-        res.status(200).send(...response2);
-    } else {
-        res.status(400).send(response)
+    }catch(e){
+        res.status(404).send([]);
     }
 })
 
