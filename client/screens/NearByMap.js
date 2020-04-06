@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
 import MapView from 'react-native-maps';
 import { Icon } from 'react-native-elements';
 
@@ -86,7 +86,9 @@ export default function NearByMap({
 							description={station.dayTimeRoutes}>
 							<MapView.Callout
 								onPress={() => navigation.navigate('SingleStation', { station: station.stopName })}
-									/>
+							>
+								<Text>{station.stopName}{"\n"}{station.dayTimeRoutes}</Text>
+							</MapView.Callout>
 						</MapView.Marker>
 					)
 				})}
