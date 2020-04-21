@@ -4,7 +4,7 @@ const axios = require('axios');
 
 const GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 
-const apiURL = `http://datamine.mta.info/mta_esi.php?key=${process.env.MTA_KEY}&feed_id=`;
+const apiURL = `https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs`;
 
 const router = require("express").Router();
 
@@ -17,18 +17,65 @@ const { Op } = require("sequelize");
 const fs = require('fs');
 
 const feedArray = [1, 2, 16, 21, 26, 31, 36, 51];
+//bdfm  g jz nqrw l 7
+const feedJson = {
+    'a': '-ace',
+    'c': '-ace',
+    'e': '-ace',
+    'b': '-bdfm',
+    'd': '-bdfm',
+    'f': '-bdfm',
+    'm': '-bdfm',
+    'g': '-g',
+    'j': 'jz',
+    'z': 'jz',
+    'n': 'nqrw',
+    'q': 'nqrw',
+    'r': 'nqrw',
+    'w': 'nqrw',
+    'l': 'l',
 
+
+}
+
+const returnFeedId = train => {
+    switch (train) {
+        case 'A':
+        case 'C':
+        case 'E':
+            return '-ace';
+        case 'B':
+        case 'D':
+        case 'F':
+        case 'M':
+            return '-bdfm';
+        case 'G':
+            return '-g'
+        case 'N':
+        case 'Q':
+        case 'R':
+        case 'W':
+            return '-nqrw';
+        case 'J':
+        case 'Z':
+            return '-jz';
+        case 7 :
+            return '-7';
+        default:
+            return '';
+    }
+}
 
 const getTrainTimes = async (stop, feed) => {
     try {
-
         let { data } = await axios.request({
             method: "GET",
             url: `${apiURL}${feed}`,
             headers: {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Credentials": true,
-                "content-type": 'application/json'
+                "content-type": 'application/json',
+                "x-api-key": `${process.env.NEW_KEY}`
             },
             responseType: 'arraybuffer',
             responseEncoding: 'utf8'
@@ -36,7 +83,8 @@ const getTrainTimes = async (stop, feed) => {
         const typedArray = new Uint8Array(data);
         const body = [...typedArray];
         let mtaFeed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
-        if (!mtaFeed) mtaFeed = JSON.parse(await fs.readFileSync(`./caches/cacheFor${feed}.txt`).toString());
+        // return mtaFeed;
+        // if (!mtaFeed) mtaFeed = JSON.parse(await fs.readFileSync(`./caches/cacheFor${feed}.txt`).toString());
         // const headerTime = mtaFeed.header.timestamp * 1000;
         let response = {};
         mtaFeed.entity.map(entity => {
@@ -96,12 +144,8 @@ const getFeedNumber = async (stopName) => {
         if (dayTimeRoutes) {
             let routes = dayTimeRoutes.split(" ");
             for (let route of routes) {
-                let { feedId } = await Feed.findOne({
-                    where: {
-                        trainId: route
-                    }
-                }).then(data => data)
-                FeedIds.add(feedId);
+                console.log(returnFeedId(route));
+                FeedIds.add(returnFeedId(route));
             }
         }
         return [FeedIds, stopId];
