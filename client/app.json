@@ -27,6 +27,9 @@
     "ios": {
       "bundleIdentifier": "NYC-App",
       "buildNumber": "1.0.0"
-    }
-  }
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  },
+  "displayName": "NYCTransit",
+  "name": "NYCTransit"
 }
