@@ -13,7 +13,7 @@ export const Favorites = ({ navigation }) => {
         try {
             const value = await AsyncStorage.getAllKeys();
             if (value !== null) {
-                return setFavorites(value.map(station => station.includes('&') ? station.split('&')[1] : ''));
+                return setFavorites(value.map(station => station.includes('&') ? station.substring(1) : ''));
             } else {
                 return ['No Favorites set'];
             }
@@ -24,7 +24,6 @@ export const Favorites = ({ navigation }) => {
 
     useEffect(() => {
         const unsubscribe = navigation.addListener('focus', e => {
-
             async function fetchData() {
                 getFavorites();
             }
