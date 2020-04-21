@@ -25,7 +25,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.andyzheng.nycapp",
+      "buildNumber": "1.0.0"
     }
   }
 }
