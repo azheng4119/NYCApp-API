@@ -1,0 +1,6 @@
+module Pods_NYCTransit {
+  umbrella header "Pods-NYCTransit-umbrella.h"
+
+  export *
+  module * { export * }
+}
