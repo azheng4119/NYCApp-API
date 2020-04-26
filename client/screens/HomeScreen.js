@@ -1,44 +1,45 @@
 import React, { useState, useEffect } from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, ScrollView } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, ScrollView, Alert } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { NavigationEvents } from 'react-navigation';
 import axios from 'axios';
 import Images from '../assets/images';
 import Loading from '../components/Loading';
 import { Favorites } from '../components/Favorites';
+import Geolocation from '@react-native-community/geolocation';
 
 export default function HomeScreen({
   navigation
 }) {
   const [nearBy, setNearBy] = useState([]);
 
-  // useEffect(() => {
-  //   const unsubscribe = navigation.addListener('focus', e => {
-
-  //     alert('Changed');
-
-  //   });
-
-  //   return unsubscribe;
-  // }, [navigation]);
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', e => {
+      async function fetchData() {
+        getNearBy();
+      }
+      fetchData();
+    });
+    return unsubscribe;
+  }, [navigation]);
 
   useEffect(() => {
     getNearBy();
+    console.log("here")
   }, []);
 
   const getNearBy = async () => {
     try {
-      await navigator.geolocation.getCurrentPosition(
-        position => {
-          const obj = JSON.stringify(position);
-          const location = JSON.parse(obj);
-          console.log(location);
-          const currLoc = { latitude: location[`coords`][`latitude`], longitude: location[`coords`][`longitude`] };
-          searchOnCoords(currLoc);
-        },
-        error => console.log(error.message),
-        { timeout: 20000, maximumAge: 1000 }
-      )
+      await Geolocation.getCurrentPosition(
+				position => {
+					const initialPosition = JSON.stringify(position);
+					const location = JSON.parse(initialPosition);
+					const currLoc = { latitude: location[`coords`][`latitude`], longitude: location[`coords`][`longitude`] };
+					searchOnCoords(currLoc);
+				},
+				error => Alert.alert('Error', JSON.stringify(error)),
+				{enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
+			  );
     } catch (err) {
       console.log(err)
     }

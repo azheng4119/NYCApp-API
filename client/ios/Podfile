@@ -40,10 +40,19 @@ target 'NYCTransit' do
   pod 'lottie-ios', :path => '../node_modules/lottie-ios'
   pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
   pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
 
   # Automatically detect installed unimodules
   use_unimodules!
 
   # react-native-cli autolinking
   use_native_modules!
+end
+
+target 'NYCTransit Widget' do
+  # Comment the next line if you don't want to use dynamic frameworks
+
+  # Pods for NYCApp Widget
+  pod 'SwiftyJSON', '~> 4.0'
 end

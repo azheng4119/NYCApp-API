@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, TouchableOpacity, View, Text } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Text, Alert } from 'react-native';
 import MapView from 'react-native-maps';
 import { Icon } from 'react-native-elements';
-
+import Geolocation from '@react-native-community/geolocation';
 import axios from 'axios';
 
 export default function NearByMap({
@@ -19,24 +19,25 @@ export default function NearByMap({
 
 	const getNearByStations = async () => {
 		try {
-			await navigator.geolocation.getCurrentPosition(
+			Geolocation.getCurrentPosition(
 				position => {
-					const obj = JSON.stringify(position);
-					const location = JSON.parse(obj);
+					const initialPosition = JSON.stringify(position);
+					const location = JSON.parse(initialPosition);
 					const currLoc = { latitude: location[`coords`][`latitude`], longitude: location[`coords`][`longitude`] };
-					let region = {
+					console.log(location)
+					console.log(currLoc)
+				  let region = {
 						latitude: location[`coords`][`latitude`],
 						longitude: location[`coords`][`longitude`],
 						latitudeDelta: 0.01,
 						longitudeDelta: 0.01
 					}
-					console.log(currLoc)
 					mapView.current.animateToRegion(region, 1000);
 					searchOnCoords(currLoc);
 				},
-				error => console.log(error.message),
-				{ timeout: 20000, maximumAge: 1000 }
-			)
+				error => Alert.alert('Error', JSON.stringify(error)),
+				{enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
+			  );
 		} catch (err) {
 			console.log(err)
 		}

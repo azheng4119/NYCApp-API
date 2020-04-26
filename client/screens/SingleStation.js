@@ -54,6 +54,7 @@ export default function SingleStation({
 		}
 	}
 	useEffect(() => {
+		console.log("Console: testing")
 		navigation.setOptions({ title: route.params?.station });
 		getTrainTimes();
 		getFavorites();
