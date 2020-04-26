@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6D458FD826868976F0F05520B6ACB17"
-               BuildableName = "libPods-NYCTransit Widget.a"
-               BlueprintName = "Pods-NYCTransit Widget"
+               BlueprintIdentifier = "7981C25D7672DAF7584E63D32A8B5FC5"
+               BuildableName = "libPods-NYCTransit-Widget.a"
+               BlueprintName = "Pods-NYCTransit-Widget"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

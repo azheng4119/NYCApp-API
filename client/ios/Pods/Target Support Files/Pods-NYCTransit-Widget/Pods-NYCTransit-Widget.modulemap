@@ -1,5 +1,5 @@
 module Pods_NYCTransit_Widget {
-  umbrella header "Pods-NYCTransit Widget-umbrella.h"
+  umbrella header "Pods-NYCTransit-Widget-umbrella.h"
 
   export *
   module * { export * }

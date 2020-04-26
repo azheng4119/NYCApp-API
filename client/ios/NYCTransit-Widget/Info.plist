@@ -35,5 +35,18 @@
 	<string>Allow NYCTransit to use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow NYCTransit to use your location</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>node-express-env.hfrpwhjwwy.us-east-2.elasticbeanstalk.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

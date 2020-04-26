@@ -192,6 +192,7 @@
 		08EA5A173F26EF0B7CC6135BEC4B7107 /* RCTShadowView+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 24EF2FF675DF93AA5611CD1BE263F883 /* RCTShadowView+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0901126C9338F730EEEFD782FE0D968C /* RCTCxxUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 16E8E856C96820FE997E099CE42BABBD /* RCTCxxUtils.mm */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-documentation"; }; };
 		091BCD8031F0F327723DD4BC14453D32 /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCDBE8DAA5039650709D662EEB3F33A /* AnimationPublic.swift */; };
+		092E8E538050169A9E44578A0136D5F5 /* Pods-NYCTransit-Widget-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A141C0EF6A100E3C0ACD75331DC0B06 /* Pods-NYCTransit-Widget-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		094A389794D3783B01066EED19456F05 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 098E3F6E32D390CD3E6B885AF1E903C9 /* YGMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		09D1E11EB3868E16F518BCF8F10806CE /* RNCSafeAreaViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 25EA534575456867785F094500BAFDC4 /* RNCSafeAreaViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		09E1478D4C41D34F175AAED230A07DE4 /* RCTFileRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 536FB56CEC8C01E0E55958AD5A7DD8A9 /* RCTFileRequestHandler.m */; };
@@ -425,7 +426,6 @@
 		3C9D89C9A308453C0F1C1DB58548931E /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170AF0A82855A270EFC21F0BFA9C8576 /* VectorsExtensions.swift */; };
 		3CE0879B4E39D43A392B88B1FD8BF154 /* UMReactLogHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C08B7A11BEBC479B74D8EB290870221F /* UMReactLogHandler.m */; };
 		3D291C3F735A40A5A137510CA2C6E67C /* RCTMultilineTextInputViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E694002C74F1BEA285F7D9D53F12F5 /* RCTMultilineTextInputViewManager.m */; };
-		3D627ACE77234FEF38CA2F868225A522 /* Pods-NYCTransit Widget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E4F6C6B10363211D70D835F9B4E2E7 /* Pods-NYCTransit Widget-dummy.m */; };
 		3D62B6B0650C43E889B249FA6981903E /* REAModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A2877C2E9E2BDBD30986256744736062 /* REAModule.m */; };
 		3D691A7D7C6300701F86B8E0760B2A09 /* EXFontScalersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 71149BFFD2C48551B06E144ADD66E101 /* EXFontScalersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3DA59B3ECBA839DCAEF22D2B0DEE8CBC /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733E0A842C7FC4DFCAE600BFA5CC8DB /* PathNode.swift */; };
@@ -637,7 +637,6 @@
 		71A8F1F7B8F1C500E5DB54E7568768BF /* RNSScreenStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACF9A8EDCE2BC321DC48E1346A7B680 /* RNSScreenStack.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		71B1F6D3D1676C67B9689723295BBBF8 /* RNNativeViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AEFE32DC499146A85878C8340BA54A /* RNNativeViewHandler.m */; };
 		71DA7D68337F4F395D27E9A4783410B7 /* RCTImageSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FA8AAB6A3B2112F43F11313E8922FA60 /* RCTImageSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		71F8CF55A24D780A979AD9C9FDF2FAD5 /* Pods-NYCTransit Widget-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 958C3A331CCC5334840FE1C6204EE03D /* Pods-NYCTransit Widget-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		72266B7D96CB4F663AE7C4D12D2DFCF4 /* UMViewManagerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FFE896A1B54315317EDED6BBC37DA7 /* UMViewManagerAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		725BC4B216ECC3B13922602F90FD5DDC /* RNFlingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A71224E882AFB742E43E27B58CFA1B /* RNFlingHandler.m */; };
 		727DAEA19E5171C0C61EAAD9B3709D60 /* RCTBaseTextInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 75171AFA6C60BD7468C2B197FE5E304E /* RCTBaseTextInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -656,7 +655,7 @@
 		7563D4DBE0016DD8A873BB45F22E702D /* EXFileSystemLocalFileHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A831CBC0C6DFB08D266F9331AF2839 /* EXFileSystemLocalFileHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		75837E6C31747059AFB7E9B7320219B7 /* AIRMapPolylineRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3C5FDECCEFF07B00BA17E0D4A2D91C /* AIRMapPolylineRenderer.m */; };
 		758958095A8FDEA4149C59138EEAF735 /* AIRMapCalloutSubviewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC8B11C78F587475AAC63989E7986A4 /* AIRMapCalloutSubviewManager.m */; };
-		75BB901733DDE4CA700A90CF4392EA80 /* Pods-NYCTransit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 869AA8E3F8D71108F5F629678E01F22F /* Pods-NYCTransit-dummy.m */; };
+		75BB901733DDE4CA700A90CF4392EA80 /* Pods-NYCTransit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA0565E013003DA5A4FD4EA885DEBF3 /* Pods-NYCTransit-dummy.m */; };
 		75EA3C1880F07B2E393514B5269489FD /* UMReactNativeAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 442B5A5D64F7EA60DDD5CE6689717CCF /* UMReactNativeAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7645DED1C95120051C066A78D3354980 /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67B59EED60D7765F776E0F377086CC68 /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		764E447B95FA807BB73D4792D9AA3599 /* RCTRawTextShadowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 97DCC089A02A1FCC5AA19EC913D811D7 /* RCTRawTextShadowView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -882,7 +881,7 @@
 		B0ACE9E4BF5B67985724B4F01E0153E2 /* AIRMapLocalTile.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C1ED2C77A2E481B7AF01444DA5DBD7 /* AIRMapLocalTile.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B0B59FA17582A70333F69C23652A32D6 /* signalhandler.cc in Sources */ = {isa = PBXBuildFile; fileRef = E36B719D798B2D4CA28C1CB24C5C4F38 /* signalhandler.cc */; settings = {COMPILER_FLAGS = "-Wno-shorten-64-to-32"; }; };
 		B1208ABEFA22504998B800C8C953EEED /* RNTapHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A9BD7523CC516283A21D4948368A840 /* RNTapHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B126A3BC2A51F1C9C94918AE033D0EEF /* Pods-NYCTransit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6EDFE2D46EF755B3D3870962A725011 /* Pods-NYCTransit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B126A3BC2A51F1C9C94918AE033D0EEF /* Pods-NYCTransit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31086212513DE4C54334FDC4F4CAEE3F /* Pods-NYCTransit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B13D4E50659F64C59AF5FB90F99407A4 /* AIRMapWMSTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFF782656864C3311CD198BA4CF9787 /* AIRMapWMSTile.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B16724A8F7C19E4FC4BD422274463B4F /* RCTCxxModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8D89542CD9AF7023251939888A4FF4B2 /* RCTCxxModule.mm */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-documentation"; }; };
 		B24DA0CD9143E6B032CDF58ED5E0289F /* Folly-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B22DCED19FF7A57FA483C1E96EC2B8E /* Folly-dummy.m */; };
@@ -969,6 +968,7 @@
 		C40905B19824DB17FEDE7740F5973EB3 /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F61FCE841A93A8D35F75FCF8E34BE6D /* LayerTransformNode.swift */; };
 		C465CC3EF3F4442CED2AFE6D3B71E956 /* RCTEventEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 52EFAECFEB01DD6E8027B4A846346F81 /* RCTEventEmitter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C468445B3A9C01F4B3DEBF7897799B6F /* RCTRefreshControlManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D747495329F3AF65DBEE3BE1E567B2 /* RCTRefreshControlManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C477A8CB169E5FDF4E7CBEFE2EA34A05 /* Pods-NYCTransit-Widget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD0FB523019C732F4A141CE4CB0F67 /* Pods-NYCTransit-Widget-dummy.m */; };
 		C4F688FCAE7867B655AA233592971E0C /* MethodCall.h in Headers */ = {isa = PBXBuildFile; fileRef = E55632C954782DDE28EE3DA3F5F26DC5 /* MethodCall.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C5230A9F781A3C9B4BFB1D3241CB3DD6 /* RecoverableError.h in Headers */ = {isa = PBXBuildFile; fileRef = 7050AF76E7BA0EF50C75C4FFEB41D0A0 /* RecoverableError.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C5B4C06C4D28832A72CCB4CE33A10670 /* RCTSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = DBA48A17A5B5D158C6FB3C7FF009713F /* RCTSwitch.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -1340,13 +1340,6 @@
 			remoteGlobalIDString = 97C4DE84FA3CC4EC06AA6D8C249949B7;
 			remoteInfo = UMImageLoaderInterface;
 		};
-		1683C6A444CCD60ACDF70680F51D9FD8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
-			remoteInfo = SwiftyJSON;
-		};
 		16F5CB64698474D3D23145881648F01A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -1668,6 +1661,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7ACAA9BE580DD31A5CB9D97C45D9492D;
 			remoteInfo = "React-Core";
+		};
+		5CC60E0756FFCED97C65C3EDCAE74B65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
 		};
 		5F49B87D97176A32388AA289E77F372E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2376,6 +2376,7 @@
 		046546822E34CCFDAB8154E193CA6072 /* EXConstants-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EXConstants-prefix.pch"; sourceTree = "<group>"; };
 		04A0B608FF130444A73342F10B0B0122 /* RCTNativeAnimatedModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTNativeAnimatedModule.h; path = Libraries/NativeAnimation/RCTNativeAnimatedModule.h; sourceTree = "<group>"; };
 		04A4FA584EB9B44AE79852E0CC9D742F /* GradientStroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientStroke.swift; sourceTree = "<group>"; };
+		04C93187298A2FA84C7CD980510D32C9 /* Pods-NYCTransit-Widget.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NYCTransit-Widget.modulemap"; sourceTree = "<group>"; };
 		04EFA35D0D917E7DA5D28E0AB86771CF /* FillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FillRenderer.swift; sourceTree = "<group>"; };
 		04FC34F2B27ED4CB8EAE38893BF7F936 /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Utils.cpp; path = yoga/Utils.cpp; sourceTree = "<group>"; };
 		04FE15748DD3B211193B7B6BFCA3D7C6 /* ReactMarker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ReactMarker.h; sourceTree = "<group>"; };
@@ -2417,7 +2418,6 @@
 		0AA65FFD5EA2FD588D3AB32B4907273C /* RCTRootContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTRootContentView.h; sourceTree = "<group>"; };
 		0AC4A72164A16E39EF473073B823CD5F /* RCTCxxMethod.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTCxxMethod.mm; sourceTree = "<group>"; };
 		0ACD4A3C064D8C6BFCB620C5314CBA21 /* EXPermissions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EXPermissions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		0ACE8DEB4E854B0C5065FCCDE510654C /* Pods-NYCTransit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYCTransit-resources.sh"; sourceTree = "<group>"; };
 		0B164824C890C55431647AB9C548292F /* FBReactNativeSpec-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBReactNativeSpec-dummy.m"; sourceTree = "<group>"; };
 		0B27987BF20C51CDE304020A81148C6A /* RCTSegmentedControlManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSegmentedControlManager.m; sourceTree = "<group>"; };
 		0BAB23CCDE288FC3886B5873CC06C489 /* EXReactNativeUserNotificationCenterProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXReactNativeUserNotificationCenterProxy.h; path = EXPermissions/EXReactNativeUserNotificationCenterProxy.h; sourceTree = "<group>"; };
@@ -2453,6 +2453,7 @@
 		11C4591E11768FEE7973C1495649B891 /* RCTCxxMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTCxxMethod.h; sourceTree = "<group>"; };
 		121BDFF0739CCB77BB22523F387058CE /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = yoga/YGLayout.h; sourceTree = "<group>"; };
 		122ED27BEAA0105AD2A768C9F0E8BAB7 /* RCTSafeAreaShadowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSafeAreaShadowView.m; sourceTree = "<group>"; };
+		1276CE8379A806077BE81B8DB463F5F5 /* Pods-NYCTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit.release.xcconfig"; sourceTree = "<group>"; };
 		12CF95A1910E9EEFBB8480992FDFE588 /* RNGestureHandlerButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNGestureHandlerButton.h; path = ios/RNGestureHandlerButton.h; sourceTree = "<group>"; };
 		130FDB3F9E4AD0550FEFF95842D711FE /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		133ABABCA04B9F315525568A721BB611 /* RCTTouchEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTTouchEvent.h; sourceTree = "<group>"; };
@@ -2462,6 +2463,7 @@
 		13CC41A32978BCAFBFF277C50EFD1465 /* RCTPerformanceLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTPerformanceLogger.h; sourceTree = "<group>"; };
 		14294471E2FAAB10D44EBE8E99C1628F /* RNCMaskedView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RNCMaskedView.xcconfig; sourceTree = "<group>"; };
 		148FFD4DDE85D91B7993371F1E1DFCC6 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		14FDA7926468481549E1B310A591F400 /* Pods-NYCTransit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYCTransit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		152AA08375FB890899B2325B149CA760 /* RNRootViewGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNRootViewGestureRecognizer.h; path = ios/RNRootViewGestureRecognizer.h; sourceTree = "<group>"; };
 		152DC2F33B8A909AF625DAA3AF04CCB9 /* EXLocation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EXLocation.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		15C24F47B4D28487270AC63523CB05A5 /* UMErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMErrorCodes.h; path = UMCore/UMErrorCodes.h; sourceTree = "<group>"; };
@@ -2566,6 +2568,7 @@
 		270D43F88A36BB905E883C7E7F6E8CE7 /* EXErrorRecovery-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EXErrorRecovery-prefix.pch"; sourceTree = "<group>"; };
 		2759972D3B9D154DCD665E1CC0F6BAE5 /* vlog_is_on.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vlog_is_on.h; path = src/glog/vlog_is_on.h; sourceTree = "<group>"; };
 		27718DD6E401B474C97A953FA69A324F /* EXErrorRecovery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EXErrorRecovery-dummy.m"; sourceTree = "<group>"; };
+		27C605F66C41C0602A9E1A6A73CD289F /* Pods-NYCTransit-Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit-Widget.release.xcconfig"; sourceTree = "<group>"; };
 		27FDB1E04D4451379FF6D223B0ECAF22 /* NativeToJsBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NativeToJsBridge.h; sourceTree = "<group>"; };
 		2820F11F51536F51E9B85D8760D1C420 /* React-RCTImage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "React-RCTImage.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2847B2CF1266DF4F59AAFB495D87262A /* UMBridgeModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMBridgeModule.h; path = UMReactNativeAdapter/UMBridgeModule.h; sourceTree = "<group>"; };
@@ -2614,12 +2617,15 @@
 		2F5C29EE5FFDA0A7A8A0D1A8AE1A306A /* RCTSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSegmentedControl.m; sourceTree = "<group>"; };
 		2F5C9BA426180D3CE19D990DF67A88A2 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = SimpleLineIcons.ttf; path = Fonts/SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		2F955107B98F1B5213C3C9F4CAB1EDB5 /* libreact-native-maps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libreact-native-maps.a"; path = "libreact-native-maps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA0565E013003DA5A4FD4EA885DEBF3 /* Pods-NYCTransit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYCTransit-dummy.m"; sourceTree = "<group>"; };
 		2FEA26FEC4303B88274168D16C5AEEF5 /* TurboModuleBinding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TurboModuleBinding.h; path = turbomodule/core/TurboModuleBinding.h; sourceTree = "<group>"; };
 		30081ADF00EF0892467AB9ED5746A886 /* RCTModalHostViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTModalHostViewManager.h; sourceTree = "<group>"; };
 		300B885D9695DD4FFFEF0E5B75AA3C9B /* RCTSettingsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTSettingsManager.h; path = Libraries/Settings/RCTSettingsManager.h; sourceTree = "<group>"; };
 		30925F1E096A3E115B0B15B25A241A12 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.cpp; path = yoga/YGLayout.cpp; sourceTree = "<group>"; };
+		31086212513DE4C54334FDC4F4CAEE3F /* Pods-NYCTransit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYCTransit-umbrella.h"; sourceTree = "<group>"; };
 		310FA4C9970A9315A02D3EBB93FC4731 /* lottie-react-native-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-react-native-dummy.m"; sourceTree = "<group>"; };
 		313C695C727D1ED697D569BA5EDB266A /* UMFontScalerInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMFontScalerInterface.h; path = UMFontInterface/UMFontScalerInterface.h; sourceTree = "<group>"; };
+		313DBCD099D560C588E4A7812CD123D3 /* Pods-NYCTransit-Widget-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYCTransit-Widget-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3159382DD1D8756D5DA64FDF17055D1F /* JSINativeModules.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSINativeModules.h; path = jsireact/JSINativeModules.h; sourceTree = "<group>"; };
 		315BF9DB5C416DC2A21DCEB25B0B1A5E /* RCTWebSocketExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTWebSocketExecutor.h; path = Libraries/WebSocket/RCTWebSocketExecutor.h; sourceTree = "<group>"; };
 		31C39F491395E86CA7AA8EDADD99CA7C /* React-RCTActionSheet.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "React-RCTActionSheet.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -2661,6 +2667,7 @@
 		38B3B7135A9D67107710C70C23F09606 /* demangle.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = demangle.cc; path = src/demangle.cc; sourceTree = "<group>"; };
 		38B814438083EED236E349913359412F /* MaterialIcons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = MaterialIcons.ttf; path = Fonts/MaterialIcons.ttf; sourceTree = "<group>"; };
 		38D49C2A960DB951843614CD763A873A /* instrumentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = instrumentation.h; sourceTree = "<group>"; };
+		38DD0FB523019C732F4A141CE4CB0F67 /* Pods-NYCTransit-Widget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYCTransit-Widget-dummy.m"; sourceTree = "<group>"; };
 		38EAA1EA0A3B95F2E93D9467EEFF0DEE /* REAConcatNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = REAConcatNode.m; sourceTree = "<group>"; };
 		3914984B23BF51F28102D46E83F74341 /* BridgeJSCallInvoker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BridgeJSCallInvoker.h; path = jscallinvoker/ReactCommon/BridgeJSCallInvoker.h; sourceTree = "<group>"; };
 		393CA0B49FFD8F7AB6E2B9B98A108CA3 /* AnimationTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimationTextProvider.swift; sourceTree = "<group>"; };
@@ -2704,7 +2711,6 @@
 		410DD472CAF8E9EF8D833C871EFF0A26 /* AIRMapUrlTile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AIRMapUrlTile.m; path = lib/ios/AirMaps/AIRMapUrlTile.m; sourceTree = "<group>"; };
 		414906556977E5602C683C7CCB145571 /* RCTTurboModuleManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTTurboModuleManager.mm; sourceTree = "<group>"; };
 		417BD5F28B0F62AC602379728DF4E845 /* RCTFileReaderModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTFileReaderModule.h; path = Libraries/Blob/RCTFileReaderModule.h; sourceTree = "<group>"; };
-		4185615DAB0BA402E82594E0F74DFCD7 /* Pods-NYCTransit Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		41D14307D9872E76D79799368DA152C3 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		42084DA77F4EC10EE75998A8D46C2B48 /* GradientValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientValueProvider.swift; sourceTree = "<group>"; };
 		42158D7301825A42E00B663994627392 /* EXFileSystem.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EXFileSystem.xcconfig; sourceTree = "<group>"; };
@@ -2757,7 +2763,6 @@
 		4BF9432032CC9AF2F2DB97C48E649F3E /* RCTScrollViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTScrollViewManager.h; sourceTree = "<group>"; };
 		4C30BAC14CE0AF04C0773A079AF28846 /* REAModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REAModule.h; path = ios/REAModule.h; sourceTree = "<group>"; };
 		4C3D555F9E9612D9451C42A1091DE49C /* RCTView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTView.m; sourceTree = "<group>"; };
-		4C975DEBCC977F2863BAA7EA7C4FC5EA /* Pods-NYCTransit Widget-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYCTransit Widget-acknowledgements.plist"; sourceTree = "<group>"; };
 		4CA034912598C55ECE0DEC5F64D64CFA /* EXFont.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EXFont.xcconfig; sourceTree = "<group>"; };
 		4D5F2E7AB3097461B8C11365059D6DC7 /* RCTDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTDefines.h; sourceTree = "<group>"; };
 		4DA60BF46CE589471A35E1A7E69235BF /* RCTTextShadowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTTextShadowView.m; sourceTree = "<group>"; };
@@ -2871,7 +2876,6 @@
 		64215484596F0E3BB8CA29A99E338D35 /* REACondNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = REACondNode.m; sourceTree = "<group>"; };
 		6422DB7E6000FB4E15245EABBE43DDD5 /* RCTDatePickerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTDatePickerManager.m; sourceTree = "<group>"; };
 		649F0C78702B5CD995A5A793863CA2A2 /* RCTUIImageViewAnimated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTUIImageViewAnimated.h; path = Libraries/Image/RCTUIImageViewAnimated.h; sourceTree = "<group>"; };
-		64E4C38AE39727DD8EF9049F36894A7A /* Pods-NYCTransit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NYCTransit.modulemap"; sourceTree = "<group>"; };
 		650906C0E2690018D8F26DDC0D5C8E6E /* RNForceTouchHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RNForceTouchHandler.m; sourceTree = "<group>"; };
 		6521F13CAF3FA11E89B463CE2E54F1BD /* UMModuleRegistryConsumer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UMModuleRegistryConsumer.h; sourceTree = "<group>"; };
 		65223A27E00A2A225D4556793071F7C3 /* Instance.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = Instance.cpp; sourceTree = "<group>"; };
@@ -2892,7 +2896,6 @@
 		67B59EED60D7765F776E0F377086CC68 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
 		67D3C9DAFB3E2E7304C12027BB080D8D /* UIView+React.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+React.h"; sourceTree = "<group>"; };
 		6824659D90E37CADBF507C98B698AC37 /* REAFunctionNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = REAFunctionNode.m; sourceTree = "<group>"; };
-		6827A471FAB48FD0E09958F4649CDB8D /* libPods-NYCTransit Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NYCTransit Widget.a"; path = "libPods-NYCTransit Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		689ED2FAE35B50558E78A45B77979E04 /* RNGestureHandlerModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNGestureHandlerModule.m; path = ios/RNGestureHandlerModule.m; sourceTree = "<group>"; };
 		692D0E8B50BF54587CEDC66E63D1E160 /* RCTAnimationDriver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAnimationDriver.h; sourceTree = "<group>"; };
 		69C5A60263FB5C7024265C9128D8BC85 /* EXLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXLocation.m; path = EXLocation/EXLocation.m; sourceTree = "<group>"; };
@@ -2961,7 +2964,7 @@
 		7504A9901986C33D7EEA109DBE6D9DB7 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CompoundBezierPath.swift; sourceTree = "<group>"; };
 		75171AFA6C60BD7468C2B197FE5E304E /* RCTBaseTextInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTBaseTextInputView.h; sourceTree = "<group>"; };
 		7542AD5B1AADB13295D4B804362FA277 /* RCTRedBoxExtraDataViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTRedBoxExtraDataViewController.m; sourceTree = "<group>"; };
-		758C6ED174AD98AE3928F389AC2DF2BC /* Pods-NYCTransit Widget.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NYCTransit Widget.modulemap"; sourceTree = "<group>"; };
+		757AD52D292B406AD3FD66847A889DA9 /* Pods-NYCTransit-Widget-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYCTransit-Widget-acknowledgements.plist"; sourceTree = "<group>"; };
 		75AE6A2D21AFA1768272C4B4639ADB70 /* RCTSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSpringAnimation.h; sourceTree = "<group>"; };
 		75FAD084577A8945374DEBE988E4AC5F /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
 		760FD9C25B8A6656BCD58C03ED1AA9A1 /* UMFontManagerInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMFontManagerInterface.h; path = UMFontInterface/UMFontManagerInterface.h; sourceTree = "<group>"; };
@@ -3016,7 +3019,6 @@
 		810B3499FA90792985EDD6A846355675 /* RCTJSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTJSStackFrame.h; sourceTree = "<group>"; };
 		8133E93B078DC81E0BFA4E1754C32C10 /* double-conversion.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = "double-conversion.cc"; path = "double-conversion/double-conversion.cc"; sourceTree = "<group>"; };
 		819B56C951A6D80D513A92FBA8FD72A0 /* RCTBackedTextInputDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTBackedTextInputDelegate.h; sourceTree = "<group>"; };
-		81E4F6C6B10363211D70D835F9B4E2E7 /* Pods-NYCTransit Widget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYCTransit Widget-dummy.m"; sourceTree = "<group>"; };
 		81E52D84E70ABDE1BB44D27940178E4D /* JSModulesUnbundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JSModulesUnbundle.h; sourceTree = "<group>"; };
 		81EABE0E4CFD7676C05A326902E133F6 /* AIRMapCoordinate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AIRMapCoordinate.m; path = lib/ios/AirMaps/AIRMapCoordinate.m; sourceTree = "<group>"; };
 		820A67C9CD747E9C4D89817C9D541E27 /* RCTAlertManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAlertManager.h; sourceTree = "<group>"; };
@@ -3044,7 +3046,6 @@
 		855C4A3FEE1C01D262BE8D68890F39CA /* RCTSourceCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSourceCode.h; sourceTree = "<group>"; };
 		857EEEF24E443D8011C15C82AD51731B /* RCTPlatform.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTPlatform.mm; sourceTree = "<group>"; };
 		859D4565E845806E0805AB345705839D /* UMImageLoaderInterface.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMImageLoaderInterface.xcconfig; sourceTree = "<group>"; };
-		869AA8E3F8D71108F5F629678E01F22F /* Pods-NYCTransit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYCTransit-dummy.m"; sourceTree = "<group>"; };
 		87145A1BBA1BB07ADFB96236F8331B63 /* InvertedMatteLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvertedMatteLayer.swift; sourceTree = "<group>"; };
 		8790FD1846A40FC0B0BC5C05CFFAE747 /* RNGestureHandlerButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNGestureHandlerButton.m; path = ios/RNGestureHandlerButton.m; sourceTree = "<group>"; };
 		87CA45E2D3404739C95834767A6ABEE8 /* React-jsinspector.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "React-jsinspector.xcconfig"; sourceTree = "<group>"; };
@@ -3115,7 +3116,6 @@
 		954342D0E80B5B83110F9B602C06AE5F /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNode.cpp; path = yoga/YGNode.cpp; sourceTree = "<group>"; };
 		95560B8E59B0AC1841B01FB7C2241762 /* RCTJavaScriptExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTJavaScriptExecutor.h; sourceTree = "<group>"; };
 		957051F6B8320602DDD033D19E06ACB2 /* RCTFrameUpdate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTFrameUpdate.m; sourceTree = "<group>"; };
-		958C3A331CCC5334840FE1C6204EE03D /* Pods-NYCTransit Widget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYCTransit Widget-umbrella.h"; sourceTree = "<group>"; };
 		959CE5BEE4EF5C8CD4E0CBB09F6DB342 /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGEnums.h; path = yoga/YGEnums.h; sourceTree = "<group>"; };
 		95C7AF52FCF227DBB1BBE33579D9309B /* Assume.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Assume.cpp; path = folly/lang/Assume.cpp; sourceTree = "<group>"; };
 		9601BCB4233E0ECDCD4D879949759A91 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Keyframe.swift; sourceTree = "<group>"; };
@@ -3145,6 +3145,7 @@
 		997501C5A98F7BD4B19935DDB591F2FC /* UMTaskManagerInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMTaskManagerInterface.h; path = UMTaskManagerInterface/UMTaskManagerInterface.h; sourceTree = "<group>"; };
 		99D86E6DD5B363DAA8499EBD431ECABD /* RCTConvert+CoreLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+CoreLocation.m"; sourceTree = "<group>"; };
 		99F4EF5562000B8C25D68FF48DC04021 /* MallocImpl.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = MallocImpl.cpp; path = folly/memory/detail/MallocImpl.cpp; sourceTree = "<group>"; };
+		9A141C0EF6A100E3C0ACD75331DC0B06 /* Pods-NYCTransit-Widget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYCTransit-Widget-umbrella.h"; sourceTree = "<group>"; };
 		9A2171BFFBE5A56C41AA2A5DD097FF0D /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNodePrint.h; path = yoga/YGNodePrint.h; sourceTree = "<group>"; };
 		9A681C11EA5CDA7B49665199E5167DC8 /* RNVectorIcons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RNVectorIcons-prefix.pch"; sourceTree = "<group>"; };
 		9A9456A6E87AB21A75813C408D65E019 /* RCTUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTUtils.h; sourceTree = "<group>"; };
@@ -3211,9 +3212,9 @@
 		A4F3D1538385076F91636796190BBFEA /* RCTSinglelineTextInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSinglelineTextInputView.h; sourceTree = "<group>"; };
 		A54CEBD0BDBB88D43335F063A6BB3AB3 /* RCTParserUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTParserUtils.m; sourceTree = "<group>"; };
 		A57F16C05A5347DE25E0989CC01DF56F /* lottie-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-ios-dummy.m"; sourceTree = "<group>"; };
+		A586F8D7600365EA6E8114820385BA7F /* libPods-NYCTransit-Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NYCTransit-Widget.a"; path = "libPods-NYCTransit-Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58CB332E8A3A049D01BA1D4F81887D0 /* jsi-inl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "jsi-inl.h"; sourceTree = "<group>"; };
 		A59297254A4D76A4B9467D7C9CBD6365 /* RCTVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTVersion.h; sourceTree = "<group>"; };
-		A5A3452EA3DDC605C3A8644E505A833E /* Pods-NYCTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit.release.xcconfig"; sourceTree = "<group>"; };
 		A5B4D91B7B7C2A35ECECFD8830F1EADE /* SharedProxyCxxModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SharedProxyCxxModule.h; sourceTree = "<group>"; };
 		A67EE251C9ED48A0197CD6D02E557647 /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextLayerModel.swift; sourceTree = "<group>"; };
 		A68E5A9B69A3BA0FD52CAF7A354EC93B /* libReact-RCTNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libReact-RCTNetwork.a"; path = "libReact-RCTNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3288,7 +3289,6 @@
 		B5A01B36CEAB215EC85DB2C5BBE06A9B /* RCTDiffClampAnimatedNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTDiffClampAnimatedNode.m; sourceTree = "<group>"; };
 		B5B6C57E7E3702B92DA7967F9AF7674B /* RCTVirtualTextShadowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTVirtualTextShadowView.m; sourceTree = "<group>"; };
 		B5D5FE6EFF5A94FAF695AFB91E6DE024 /* EXSQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXSQLite.h; path = EXSQLite/EXSQLite.h; sourceTree = "<group>"; };
-		B604BED6A016DFB741D71DB42BDA8C27 /* Pods-NYCTransit Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit Widget.release.xcconfig"; sourceTree = "<group>"; };
 		B62B9894B663527C03E57CD25D56B9DA /* RCTURLRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTURLRequestDelegate.h; sourceTree = "<group>"; };
 		B6ACFCB5E7CC5A9415CD73043CF3E474 /* RCTTransformAnimatedNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTTransformAnimatedNode.h; sourceTree = "<group>"; };
 		B6D72E69685FDD6EEC6AD979F7343F6B /* react-native-safe-area-context-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "react-native-safe-area-context-dummy.m"; sourceTree = "<group>"; };
@@ -3298,6 +3298,7 @@
 		B733E0A842C7FC4DFCAE600BFA5CC8DB /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PathNode.swift; sourceTree = "<group>"; };
 		B783879B7CE2D2D2CB5004E2443B2809 /* RCTProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTProfile.m; sourceTree = "<group>"; };
 		B7D2ECCA81DECC8C2379C879D945F006 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B7DE6932805F7C3B05ECBBA59623ACB4 /* Pods-NYCTransit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NYCTransit.modulemap"; sourceTree = "<group>"; };
 		B819AB790FF28E514DCA6EC3C5FB67B9 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
 		B8B17F98A5373A051CA66C78C5848494 /* RCTTextSelection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTTextSelection.m; sourceTree = "<group>"; };
 		B8CD4B9B578CE9FA38114B638C9CAA78 /* libRNCMaskedView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRNCMaskedView.a; path = libRNCMaskedView.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3321,7 +3322,6 @@
 		BD4899332FB53ADE1573680751B39686 /* RCTAdditionAnimatedNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTAdditionAnimatedNode.h; sourceTree = "<group>"; };
 		BD568E7D82B39AC93CA8AEA49BCA97EF /* EXRemoteNotificationPermissionRequester.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = EXRemoteNotificationPermissionRequester.h; sourceTree = "<group>"; };
 		BD5C31AB26BC119C81D83A9CF499364A /* RCTDivisionAnimatedNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTDivisionAnimatedNode.h; sourceTree = "<group>"; };
-		BD63386FC1B4FC676F06A3AC9D03FDE5 /* Pods-NYCTransit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYCTransit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BD71E2539823621820F84384064C253A /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libReact-Core.a"; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD94BE196938594B7B0C7CFCC70DD1CC /* RCTSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSegmentedControl.h; sourceTree = "<group>"; };
 		BE1C7C0234A1B9EB61636CB8C2ADC125 /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StrokeNode.swift; sourceTree = "<group>"; };
@@ -3342,8 +3342,8 @@
 		C0DCC7E48D6E99E23FDEE1A05F5E74C0 /* json.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = json.cpp; path = folly/json.cpp; sourceTree = "<group>"; };
 		C134925A56BE06C7FF77D6C7A46F441B /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CompositionLayer.swift; sourceTree = "<group>"; };
 		C135D21C664E0F61AA404C8E1A9C86EE /* RCTTiming.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTTiming.m; sourceTree = "<group>"; };
+		C13EBF153A70E8FB3DAB543999D788B2 /* Pods-NYCTransit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYCTransit-acknowledgements.plist"; sourceTree = "<group>"; };
 		C14CF80D9E5DDB34EDDE5CC7EC4B5525 /* Fontisto.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = Fontisto.ttf; path = Fonts/Fontisto.ttf; sourceTree = "<group>"; };
-		C187E179AE54B49B45B753E93CD7B39B /* Pods-NYCTransit Widget-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NYCTransit Widget-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C1A5A178BA44D10B7DD9663191C30743 /* UMTaskManagerInterface.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UMTaskManagerInterface.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C1A919103EAC9813D236486C34FC0A21 /* libReact-RCTVibration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libReact-RCTVibration.a"; path = "libReact-RCTVibration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1DA309E842D980FAD1087E21BEAF120 /* RCTImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTImageLoader.h; path = React/CoreModules/RCTImageLoader.h; sourceTree = "<group>"; };
@@ -3428,10 +3428,12 @@
 		CF0C8ED6EA5CB44D326BD863E88179EA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CF68771EA3F2B37EB8E426BFB492BB85 /* react-native-geolocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "react-native-geolocation.xcconfig"; sourceTree = "<group>"; };
 		CF8EA65245D738A1315CC712960238C4 /* symbolize.cc */ = {isa = PBXFileReference; includeInIndex = 1; name = symbolize.cc; path = src/symbolize.cc; sourceTree = "<group>"; };
+		CF985D8B6153198284E9AF1432B9EB2E /* Pods-NYCTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit.debug.xcconfig"; sourceTree = "<group>"; };
 		D009DBB345D8FC4D091D3784FC527B11 /* RCTImageLoaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTImageLoaderProtocol.h; path = Libraries/Image/RCTImageLoaderProtocol.h; sourceTree = "<group>"; };
 		D05A58DD65649D860B78C7626D2F6FC7 /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GradientFill.swift; sourceTree = "<group>"; };
 		D06760D5032C5564D94E4C416AABD993 /* RCTValueAnimatedNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTValueAnimatedNode.m; sourceTree = "<group>"; };
 		D07E0C77816CF346D8C58828F3D00A8D /* PrecompAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrecompAsset.swift; sourceTree = "<group>"; };
+		D08B1B206731AB3646EDEB009D30D895 /* Pods-NYCTransit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NYCTransit-resources.sh"; sourceTree = "<group>"; };
 		D092B45B8613DB562BB7D4FF13E26D1F /* RCTBaseTextShadowView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTBaseTextShadowView.h; sourceTree = "<group>"; };
 		D0A9F7438E8B133456662DB2A0DCF804 /* React-RCTAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "React-RCTAnimation-prefix.pch"; sourceTree = "<group>"; };
 		D0BA8FE6EAD0EB85FE6AFEE5FD279634 /* TextCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextCompositionLayer.swift; sourceTree = "<group>"; };
@@ -3473,7 +3475,6 @@
 		D68F21A5EFFC554CD8C9CB6670BDB692 /* RNGestureHandlerEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNGestureHandlerEvents.h; path = ios/RNGestureHandlerEvents.h; sourceTree = "<group>"; };
 		D6970737A1CC03193C6AE210A480BC68 /* RNRotationHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RNRotationHandler.m; sourceTree = "<group>"; };
 		D6A3B15D582F1FE6E6661B56455D23D1 /* UMFaceDetectorInterface.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UMFaceDetectorInterface.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D6EDFE2D46EF755B3D3870962A725011 /* Pods-NYCTransit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYCTransit-umbrella.h"; sourceTree = "<group>"; };
 		D71D163D83E878D04D2895947C00E5D8 /* REAJSCallNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = REAJSCallNode.h; sourceTree = "<group>"; };
 		D725BAA633C8ADF35DF9BC00D31598CE /* RCTTypeSafety-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RCTTypeSafety-dummy.m"; sourceTree = "<group>"; };
 		D7877616CA01D12E29E3711952411129 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
@@ -3525,7 +3526,6 @@
 		DE3B6036D604BE05CA7CD8C7F676CF71 /* React-RCTBlob-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "React-RCTBlob-dummy.m"; sourceTree = "<group>"; };
 		DEC331798342E660F3FFEB0AC3958F54 /* RCTRootViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTRootViewInternal.h; sourceTree = "<group>"; };
 		DEE1D61C1B51BF892ABF9B56A60AB41E /* RCTWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTWeakProxy.m; sourceTree = "<group>"; };
-		DF12EA155D5E55405ECE42BDEACB2E67 /* Pods-NYCTransit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NYCTransit-acknowledgements.plist"; sourceTree = "<group>"; };
 		DF21E3F0DD5F30A79992966262AEFAD8 /* RCTImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTImageCache.h; path = Libraries/Image/RCTImageCache.h; sourceTree = "<group>"; };
 		DF227B337A8D68EE856E80380002EB3F /* EXGeofencingTaskConsumer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = EXGeofencingTaskConsumer.m; sourceTree = "<group>"; };
 		DF31F6BFD28F037A35D6847507FA0894 /* RCTErrorInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTErrorInfo.m; sourceTree = "<group>"; };
@@ -3605,6 +3605,7 @@
 		EE2F8C61CC3161416B8840AE8FD25FC3 /* logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = logging.h; path = src/glog/logging.h; sourceTree = "<group>"; };
 		EE3353334B6BB41C84A30B3D96E13603 /* UMReactNativeAdapter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UMReactNativeAdapter-dummy.m"; sourceTree = "<group>"; };
 		EE49E91E3CE9CA38053A027D10814ACB /* AIRMapPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AIRMapPolyline.h; path = lib/ios/AirMaps/AIRMapPolyline.h; sourceTree = "<group>"; };
+		EE508A83CE24EC67E0D7A8908A6F0EE1 /* Pods-NYCTransit-Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit-Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		EE532AF33162673D3BF09FCA58386211 /* EXWebBrowser.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = EXWebBrowser.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EE74ACB1D805516ABF743848A140CAA9 /* RCTImageStoreManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTImageStoreManager.h; path = React/CoreModules/RCTImageStoreManager.h; sourceTree = "<group>"; };
 		EE90A390AFA180DC79C62C5698BCC040 /* RNCSafeAreaViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RNCSafeAreaViewManager.m; path = ios/SafeAreaView/RNCSafeAreaViewManager.m; sourceTree = "<group>"; };
@@ -3689,7 +3690,6 @@
 		FE7B9294FF05AAFD1653E2104E10844A /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libReact-RCTAnimation.a"; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE8744767EEDBCC2A367328A15BD470B /* REANode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = REANode.h; sourceTree = "<group>"; };
 		FF137CEBD5763F15B2D0ED0B6838447A /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		FF421122CAA791EBDEA7D21DFD407626 /* Pods-NYCTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYCTransit.debug.xcconfig"; sourceTree = "<group>"; };
 		FFB34456467703F7427457C5B1179168 /* RCTShadowView+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RCTShadowView+Layout.h"; sourceTree = "<group>"; };
 		FFD6536E783ED27EC5802BCB806AF9A6 /* RCTSourceCode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSourceCode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3829,13 +3829,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		674F7A50F5D148B4A41C618D3EC5E41E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6757350E1BAFCCD872F5373BE120062B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -4011,6 +4004,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E191609CD3FAF8B6E7CA90C1C96F1A55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F5E9B10E406E88A11FD9C6E5A95929 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -4207,21 +4207,6 @@
 			);
 			name = "Support Files";
 			path = "../../../../ios/Pods/Target Support Files/Yoga";
-			sourceTree = "<group>";
-		};
-		063B542D7EF474FC8D989D7AE7710FAE /* Pods-NYCTransit Widget */ = {
-			isa = PBXGroup;
-			children = (
-				758C6ED174AD98AE3928F389AC2DF2BC /* Pods-NYCTransit Widget.modulemap */,
-				C187E179AE54B49B45B753E93CD7B39B /* Pods-NYCTransit Widget-acknowledgements.markdown */,
-				4C975DEBCC977F2863BAA7EA7C4FC5EA /* Pods-NYCTransit Widget-acknowledgements.plist */,
-				81E4F6C6B10363211D70D835F9B4E2E7 /* Pods-NYCTransit Widget-dummy.m */,
-				958C3A331CCC5334840FE1C6204EE03D /* Pods-NYCTransit Widget-umbrella.h */,
-				4185615DAB0BA402E82594E0F74DFCD7 /* Pods-NYCTransit Widget.debug.xcconfig */,
-				B604BED6A016DFB741D71DB42BDA8C27 /* Pods-NYCTransit Widget.release.xcconfig */,
-			);
-			name = "Pods-NYCTransit Widget";
-			path = "Target Support Files/Pods-NYCTransit Widget";
 			sourceTree = "<group>";
 		};
 		07B32335AD475CF153A26EAE24C72EE3 /* React-jsinspector */ = {
@@ -4485,6 +4470,15 @@
 			);
 			name = "Support Files";
 			path = "../../../../ios/Pods/Target Support Files/RCTTypeSafety";
+			sourceTree = "<group>";
+		};
+		1326DA7948F72CA4350C9724C710DE25 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C232855840BA0A773C50A56D28A41E7 /* Pods-NYCTransit */,
+				F76E84EFD7B91CA7DB64AE98E941E411 /* Pods-NYCTransit-Widget */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		14265302358453182CE9C097797C477C /* Pod */ = {
@@ -5362,6 +5356,22 @@
 			path = "../../../../ios/Pods/Target Support Files/React-RCTAnimation";
 			sourceTree = "<group>";
 		};
+		4C232855840BA0A773C50A56D28A41E7 /* Pods-NYCTransit */ = {
+			isa = PBXGroup;
+			children = (
+				B7DE6932805F7C3B05ECBBA59623ACB4 /* Pods-NYCTransit.modulemap */,
+				14FDA7926468481549E1B310A591F400 /* Pods-NYCTransit-acknowledgements.markdown */,
+				C13EBF153A70E8FB3DAB543999D788B2 /* Pods-NYCTransit-acknowledgements.plist */,
+				2FA0565E013003DA5A4FD4EA885DEBF3 /* Pods-NYCTransit-dummy.m */,
+				D08B1B206731AB3646EDEB009D30D895 /* Pods-NYCTransit-resources.sh */,
+				31086212513DE4C54334FDC4F4CAEE3F /* Pods-NYCTransit-umbrella.h */,
+				CF985D8B6153198284E9AF1432B9EB2E /* Pods-NYCTransit.debug.xcconfig */,
+				1276CE8379A806077BE81B8DB463F5F5 /* Pods-NYCTransit.release.xcconfig */,
+			);
+			name = "Pods-NYCTransit";
+			path = "Target Support Files/Pods-NYCTransit";
+			sourceTree = "<group>";
+		};
 		4FB449926D61405F7D0732A1B6DEAAC5 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -5797,22 +5807,6 @@
 			path = "../Target Support Files/boost-for-react-native";
 			sourceTree = "<group>";
 		};
-		74F08B9BD938379FF9D1EB766E868052 /* Pods-NYCTransit */ = {
-			isa = PBXGroup;
-			children = (
-				64E4C38AE39727DD8EF9049F36894A7A /* Pods-NYCTransit.modulemap */,
-				BD63386FC1B4FC676F06A3AC9D03FDE5 /* Pods-NYCTransit-acknowledgements.markdown */,
-				DF12EA155D5E55405ECE42BDEACB2E67 /* Pods-NYCTransit-acknowledgements.plist */,
-				869AA8E3F8D71108F5F629678E01F22F /* Pods-NYCTransit-dummy.m */,
-				0ACE8DEB4E854B0C5065FCCDE510654C /* Pods-NYCTransit-resources.sh */,
-				D6EDFE2D46EF755B3D3870962A725011 /* Pods-NYCTransit-umbrella.h */,
-				FF421122CAA791EBDEA7D21DFD407626 /* Pods-NYCTransit.debug.xcconfig */,
-				A5A3452EA3DDC605C3A8644E505A833E /* Pods-NYCTransit.release.xcconfig */,
-			);
-			name = "Pods-NYCTransit";
-			path = "Target Support Files/Pods-NYCTransit";
-			sourceTree = "<group>";
-		};
 		7607D755EC1D444B74BCCB3155AC9CCF /* BaseText */ = {
 			isa = PBXGroup;
 			children = (
@@ -5821,15 +5815,6 @@
 			);
 			name = BaseText;
 			path = Libraries/Text/BaseText;
-			sourceTree = "<group>";
-		};
-		76634ED1D628E63B9735625048CF4747 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				74F08B9BD938379FF9D1EB766E868052 /* Pods-NYCTransit */,
-				063B542D7EF474FC8D989D7AE7710FAE /* Pods-NYCTransit Widget */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		77742AFE292C38A57505E70791556ECB /* SurfaceHostingView */ = {
@@ -6518,6 +6503,62 @@
 			name = RCTWebSocket;
 			sourceTree = "<group>";
 		};
+		AD94933ACD5EB27DCB4CEF0C40E6B3DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FFB7B2992BB53405E6B771A5BA1E97D /* libDoubleConversion.a */,
+				A225ED83E33DC48D25B9FF35BA50CCD0 /* libEXAppLoaderProvider.a */,
+				220361FF3B2778F8F38C2C4DCC5B49FD /* libEXConstants.a */,
+				80735449304A3CA87C1D6AB428FEA832 /* libEXErrorRecovery.a */,
+				ED1E3FC0DC90F4A787472917BFB6B235 /* libEXFileSystem.a */,
+				B9A8343068CE43CDCE59118C59FBBAF3 /* libEXFont.a */,
+				09B5856105EF7C6447B9EC57E7E36B34 /* libEXKeepAwake.a */,
+				3747AE14E346E991874D53D8D9FC4BA5 /* libEXLinearGradient.a */,
+				A37C597C68757F22BB31CFF6F920A258 /* libEXLocation.a */,
+				72E494917AC5EC2582197F07061A28B0 /* libEXPermissions.a */,
+				1108DC122877B2541D4AFF30154347CA /* libEXSQLite.a */,
+				574E8A849B86DCF8EE5726418D974721 /* libEXWebBrowser.a */,
+				ABFEEA82A6C346B22843FBE0B0582182 /* libFBReactNativeSpec.a */,
+				06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */,
+				3CA7A9404CCDD6BA22C97F8348CE3209 /* libglog.a */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* liblottie-ios.a */,
+				0F8D5091C801A6ECB9A173DA0E385A29 /* liblottie-react-native.a */,
+				0ECE22D124BC96E9FBBCBEC86D734768 /* libPods-NYCTransit.a */,
+				A586F8D7600365EA6E8114820385BA7F /* libPods-NYCTransit-Widget.a */,
+				F958876A082BF810B342435CE3FB5AF6 /* libRCTTypeSafety.a */,
+				BD71E2539823621820F84384064C253A /* libReact-Core.a */,
+				6771D231F4C8C5976470A369C474B32E /* libReact-CoreModules.a */,
+				37592FDAD45752511010F4B06AC57355 /* libReact-cxxreact.a */,
+				D9F334F2E90E3EE462FC4192AF5C03BD /* libReact-jsi.a */,
+				F2E7C88DFCD460A4B46B913ADEB8A641 /* libReact-jsiexecutor.a */,
+				2577F299FCB0A19824FE989BE77B8E8F /* libReact-jsinspector.a */,
+				467EB07BB1D9636C6348DE0824CE8973 /* libreact-native-geolocation.a */,
+				2F955107B98F1B5213C3C9F4CAB1EDB5 /* libreact-native-maps.a */,
+				52FCF98CEFF94C742080B6965D537AD0 /* libreact-native-safe-area-context.a */,
+				73F8A95B79671F501F31EA4F1D04AA8B /* libReact-RCTActionSheet.a */,
+				FE7B9294FF05AAFD1653E2104E10844A /* libReact-RCTAnimation.a */,
+				F71EBF73F354B475D465FF6DE9A66707 /* libReact-RCTBlob.a */,
+				EEDBF403E8E0B3885E65C2741B536BC5 /* libReact-RCTImage.a */,
+				802121F5B756ACBFDD6D08C36246DADD /* libReact-RCTLinking.a */,
+				A68E5A9B69A3BA0FD52CAF7A354EC93B /* libReact-RCTNetwork.a */,
+				269BE773C9482484B70949A40F4EA525 /* libReact-RCTSettings.a */,
+				E6A16705C69FC7DE11C2469A4A0F8358 /* libReact-RCTText.a */,
+				C1A919103EAC9813D236486C34FC0A21 /* libReact-RCTVibration.a */,
+				D5C775614AC76D44CECB6BE08B022F1F /* libReactCommon.a */,
+				B8CD4B9B578CE9FA38114B638C9CAA78 /* libRNCMaskedView.a */,
+				8F65F9361F2069CF9E9D751272968DE4 /* libRNGestureHandler.a */,
+				C777CF2FB1E39A45CBBDB54E8693F471 /* libRNReanimated.a */,
+				50B5347C9A6E93B7D4CFC3673BA6FB7E /* libRNScreens.a */,
+				8998273719FDD789E6F9C7541AFD0B33 /* libRNVectorIcons.a */,
+				E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */,
+				AF72FD600DE7E2D330BA50F877993E05 /* libUMCore.a */,
+				BC41F4BEFC115303267857B135A144AE /* libUMPermissionsInterface.a */,
+				3B640835BAA914DD267B5E780D8CFEC7 /* libUMReactNativeAdapter.a */,
+				65D0A19C165FA1126B1360680FE6DB12 /* libYoga.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AE428EC31E8DA209D5CBBED5624961AF /* EXLinearGradient */ = {
 			isa = PBXGroup;
 			children = (
@@ -7066,8 +7107,8 @@
 				F3FF5A33106D996D51B3F372827F46A6 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				1237D3C55AB48245AFE2D960EFC77AFB /* Pods */,
-				F206B5241B0224BEDE2A0A7F61491CED /* Products */,
-				76634ED1D628E63B9735625048CF4747 /* Targets Support Files */,
+				AD94933ACD5EB27DCB4CEF0C40E6B3DB /* Products */,
+				1326DA7948F72CA4350C9724C710DE25 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -7651,62 +7692,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F206B5241B0224BEDE2A0A7F61491CED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6FFB7B2992BB53405E6B771A5BA1E97D /* libDoubleConversion.a */,
-				A225ED83E33DC48D25B9FF35BA50CCD0 /* libEXAppLoaderProvider.a */,
-				220361FF3B2778F8F38C2C4DCC5B49FD /* libEXConstants.a */,
-				80735449304A3CA87C1D6AB428FEA832 /* libEXErrorRecovery.a */,
-				ED1E3FC0DC90F4A787472917BFB6B235 /* libEXFileSystem.a */,
-				B9A8343068CE43CDCE59118C59FBBAF3 /* libEXFont.a */,
-				09B5856105EF7C6447B9EC57E7E36B34 /* libEXKeepAwake.a */,
-				3747AE14E346E991874D53D8D9FC4BA5 /* libEXLinearGradient.a */,
-				A37C597C68757F22BB31CFF6F920A258 /* libEXLocation.a */,
-				72E494917AC5EC2582197F07061A28B0 /* libEXPermissions.a */,
-				1108DC122877B2541D4AFF30154347CA /* libEXSQLite.a */,
-				574E8A849B86DCF8EE5726418D974721 /* libEXWebBrowser.a */,
-				ABFEEA82A6C346B22843FBE0B0582182 /* libFBReactNativeSpec.a */,
-				06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */,
-				3CA7A9404CCDD6BA22C97F8348CE3209 /* libglog.a */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* liblottie-ios.a */,
-				0F8D5091C801A6ECB9A173DA0E385A29 /* liblottie-react-native.a */,
-				0ECE22D124BC96E9FBBCBEC86D734768 /* libPods-NYCTransit.a */,
-				6827A471FAB48FD0E09958F4649CDB8D /* libPods-NYCTransit Widget.a */,
-				F958876A082BF810B342435CE3FB5AF6 /* libRCTTypeSafety.a */,
-				BD71E2539823621820F84384064C253A /* libReact-Core.a */,
-				6771D231F4C8C5976470A369C474B32E /* libReact-CoreModules.a */,
-				37592FDAD45752511010F4B06AC57355 /* libReact-cxxreact.a */,
-				D9F334F2E90E3EE462FC4192AF5C03BD /* libReact-jsi.a */,
-				F2E7C88DFCD460A4B46B913ADEB8A641 /* libReact-jsiexecutor.a */,
-				2577F299FCB0A19824FE989BE77B8E8F /* libReact-jsinspector.a */,
-				467EB07BB1D9636C6348DE0824CE8973 /* libreact-native-geolocation.a */,
-				2F955107B98F1B5213C3C9F4CAB1EDB5 /* libreact-native-maps.a */,
-				52FCF98CEFF94C742080B6965D537AD0 /* libreact-native-safe-area-context.a */,
-				73F8A95B79671F501F31EA4F1D04AA8B /* libReact-RCTActionSheet.a */,
-				FE7B9294FF05AAFD1653E2104E10844A /* libReact-RCTAnimation.a */,
-				F71EBF73F354B475D465FF6DE9A66707 /* libReact-RCTBlob.a */,
-				EEDBF403E8E0B3885E65C2741B536BC5 /* libReact-RCTImage.a */,
-				802121F5B756ACBFDD6D08C36246DADD /* libReact-RCTLinking.a */,
-				A68E5A9B69A3BA0FD52CAF7A354EC93B /* libReact-RCTNetwork.a */,
-				269BE773C9482484B70949A40F4EA525 /* libReact-RCTSettings.a */,
-				E6A16705C69FC7DE11C2469A4A0F8358 /* libReact-RCTText.a */,
-				C1A919103EAC9813D236486C34FC0A21 /* libReact-RCTVibration.a */,
-				D5C775614AC76D44CECB6BE08B022F1F /* libReactCommon.a */,
-				B8CD4B9B578CE9FA38114B638C9CAA78 /* libRNCMaskedView.a */,
-				8F65F9361F2069CF9E9D751272968DE4 /* libRNGestureHandler.a */,
-				C777CF2FB1E39A45CBBDB54E8693F471 /* libRNReanimated.a */,
-				50B5347C9A6E93B7D4CFC3673BA6FB7E /* libRNScreens.a */,
-				8998273719FDD789E6F9C7541AFD0B33 /* libRNVectorIcons.a */,
-				E23C076BA70925415F490FEDB215DA92 /* libSwiftyJSON.a */,
-				AF72FD600DE7E2D330BA50F877993E05 /* libUMCore.a */,
-				BC41F4BEFC115303267857B135A144AE /* libUMPermissionsInterface.a */,
-				3B640835BAA914DD267B5E780D8CFEC7 /* libUMReactNativeAdapter.a */,
-				65D0A19C165FA1126B1360680FE6DB12 /* libYoga.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F24D140F0B99959846D3A084EEDF6C85 /* CompLayers */ = {
 			isa = PBXGroup;
 			children = (
@@ -7860,6 +7845,21 @@
 			);
 			name = "Support Files";
 			path = "../../../../ios/Pods/Target Support Files/React-RCTLinking";
+			sourceTree = "<group>";
+		};
+		F76E84EFD7B91CA7DB64AE98E941E411 /* Pods-NYCTransit-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				04C93187298A2FA84C7CD980510D32C9 /* Pods-NYCTransit-Widget.modulemap */,
+				313DBCD099D560C588E4A7812CD123D3 /* Pods-NYCTransit-Widget-acknowledgements.markdown */,
+				757AD52D292B406AD3FD66847A889DA9 /* Pods-NYCTransit-Widget-acknowledgements.plist */,
+				38DD0FB523019C732F4A141CE4CB0F67 /* Pods-NYCTransit-Widget-dummy.m */,
+				9A141C0EF6A100E3C0ACD75331DC0B06 /* Pods-NYCTransit-Widget-umbrella.h */,
+				EE508A83CE24EC67E0D7A8908A6F0EE1 /* Pods-NYCTransit-Widget.debug.xcconfig */,
+				27C605F66C41C0602A9E1A6A73CD289F /* Pods-NYCTransit-Widget.release.xcconfig */,
+			);
+			name = "Pods-NYCTransit-Widget";
+			path = "Target Support Files/Pods-NYCTransit-Widget";
 			sourceTree = "<group>";
 		};
 		F7D19787A31BF313B5A799FEECC92285 /* Pod */ = {
@@ -8774,18 +8774,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F362872C876D9D57408D7986172867A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				092E8E538050169A9E44578A0136D5F5 /* Pods-NYCTransit-Widget-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4E8DA223FBD2C0A29B7D20D311D920A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6D8E55C044256D5267A0538DE833C74 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71F8CF55A24D780A979AD9C9FDF2FAD5 /* Pods-NYCTransit Widget-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9199,6 +9199,24 @@
 			productReference = 802121F5B756ACBFDD6D08C36246DADD /* libReact-RCTLinking.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		7981C25D7672DAF7584E63D32A8B5FC5 /* Pods-NYCTransit-Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C4534262A5BB10EB2512C6BD565827B /* Build configuration list for PBXNativeTarget "Pods-NYCTransit-Widget" */;
+			buildPhases = (
+				F362872C876D9D57408D7986172867A9 /* Headers */,
+				73DEE8DCB37954ABD3741696B7AAEF54 /* Sources */,
+				E4F5E9B10E406E88A11FD9C6E5A95929 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				681C0A72B3F75869FA22573C7FEA3A04 /* PBXTargetDependency */,
+			);
+			name = "Pods-NYCTransit-Widget";
+			productName = "Pods-NYCTransit-Widget";
+			productReference = A586F8D7600365EA6E8114820385BA7F /* libPods-NYCTransit-Widget.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		7ACAA9BE580DD31A5CB9D97C45D9492D /* React-Core */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7088478B510ECB79F5540CA35B970819 /* Build configuration list for PBXNativeTarget "React-Core" */;
@@ -9393,24 +9411,6 @@
 			name = Folly;
 			productName = Folly;
 			productReference = 06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A6D458FD826868976F0F05520B6ACB17 /* Pods-NYCTransit Widget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8652FD6E271A88B1B7C6D4A3C106850A /* Build configuration list for PBXNativeTarget "Pods-NYCTransit Widget" */;
-			buildPhases = (
-				F6D8E55C044256D5267A0538DE833C74 /* Headers */,
-				1713DA8DF7F143AA8CF59CC023107F27 /* Sources */,
-				6757350E1BAFCCD872F5373BE120062B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B8598677689F6BAACE602DDCF162D38 /* PBXTargetDependency */,
-			);
-			name = "Pods-NYCTransit Widget";
-			productName = "Pods-NYCTransit Widget";
-			productReference = 6827A471FAB48FD0E09958F4649CDB8D /* libPods-NYCTransit Widget.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B6D5DD49633DFF0657B8C3F08EB3ABA9 /* ReactCommon */ = {
@@ -9836,7 +9836,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = F206B5241B0224BEDE2A0A7F61491CED /* Products */;
+			productRefGroup = AD94933ACD5EB27DCB4CEF0C40E6B3DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -9860,7 +9860,7 @@
 				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
 				D0A4E77DD13672F3E2E1D9593F999DBA /* lottie-react-native */,
 				C98AF8E9AF56E9D750C4481EB270976B /* Pods-NYCTransit */,
-				A6D458FD826868976F0F05520B6ACB17 /* Pods-NYCTransit Widget */,
+				7981C25D7672DAF7584E63D32A8B5FC5 /* Pods-NYCTransit-Widget */,
 				E7E7CE52C8C68B17224FF8C262D80ABF /* RCTRequired */,
 				D20469A9A1E5CFB26045EAEBE3F88E5E /* RCTTypeSafety */,
 				1BEE828C124E6416179B904A9F66D794 /* React */,
@@ -10023,14 +10023,6 @@
 				6DB976F647E681AB06E97EDB58F98C41 /* RNCMaskedView-dummy.m in Sources */,
 				211825B42C149FDE16AB9293734167D0 /* RNCMaskedView.m in Sources */,
 				C7B54C967318F61468B5526684FC207A /* RNCMaskedViewManager.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1713DA8DF7F143AA8CF59CC023107F27 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D627ACE77234FEF38CA2F868225A522 /* Pods-NYCTransit Widget-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10397,6 +10389,14 @@
 				3AA77BD1F4C8076B6E08D3259BD84FA4 /* SpookyHashV2.cpp in Sources */,
 				AB6B490BE3CD6208CF2D24E3EB7C6E10 /* String.cpp in Sources */,
 				443A50BAD6B505AADEF8DA43FF83B11E /* Unicode.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73DEE8DCB37954ABD3741696B7AAEF54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C477A8CB169E5FDF4E7CBEFE2EA34A05 /* Pods-NYCTransit-Widget-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -11347,6 +11347,12 @@
 			target = A4F685BE3CAC127BDCE4E0DBBD88D191 /* Folly */;
 			targetProxy = E8FD7532463B0528F9CE61138294EC2E /* PBXContainerItemProxy */;
 		};
+		681C0A72B3F75869FA22573C7FEA3A04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 5CC60E0756FFCED97C65C3EDCAE74B65 /* PBXContainerItemProxy */;
+		};
 		6C7D7F6D70BED83B2675D2BD14A53A20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "React-Core";
@@ -11406,12 +11412,6 @@
 			name = "React-Core";
 			target = 7ACAA9BE580DD31A5CB9D97C45D9492D /* React-Core */;
 			targetProxy = 48C25640F68157ACE968912DE7D98546 /* PBXContainerItemProxy */;
-		};
-		7B8598677689F6BAACE602DDCF162D38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = 1683C6A444CCD60ACDF70680F51D9FD8 /* PBXContainerItemProxy */;
 		};
 		7C76E9B35A8DB00CBE1FEAED2FCF738A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -12169,6 +12169,29 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		2072B3294C96FEA45BA23F0EBF266CFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE508A83CE24EC67E0D7A8908A6F0EE1 /* Pods-NYCTransit-Widget.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYCTransit-Widget/Pods-NYCTransit-Widget.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		20EA605E1D9B4903AE436A28C75BA9BD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -14064,7 +14087,7 @@
 		};
 		B74A191F01107E2EAC59392FADB0C254 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5A3452EA3DDC605C3A8644E505A833E /* Pods-NYCTransit.release.xcconfig */;
+			baseConfigurationReference = 1276CE8379A806077BE81B8DB463F5F5 /* Pods-NYCTransit.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -14101,7 +14124,7 @@
 		};
 		BC09DC2A72AFCF0F7F66F80DFE5B562F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF421122CAA791EBDEA7D21DFD407626 /* Pods-NYCTransit.debug.xcconfig */;
+			baseConfigurationReference = CF985D8B6153198284E9AF1432B9EB2E /* Pods-NYCTransit.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -14289,30 +14312,6 @@
 			};
 			name = Release;
 		};
-		CB31AD32431A4F9FBDAFC6E49070FAA4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B604BED6A016DFB741D71DB42BDA8C27 /* Pods-NYCTransit Widget.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NYCTransit Widget/Pods-NYCTransit Widget.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		CD26F4BEB83F26811BF1081A76FAA47F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D68DA21E28003DAE05A3CDB64EC7997D /* RNVectorIcons.xcconfig */;
@@ -14466,29 +14465,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		DCEE55618AE4B252DD972D1025F233E7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4185615DAB0BA402E82594E0F74DFCD7 /* Pods-NYCTransit Widget.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NYCTransit Widget/Pods-NYCTransit Widget.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		DD1B8CEDD17B96B18FE49ACB678C251D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -14746,6 +14722,30 @@
 			};
 			name = Debug;
 		};
+		FC05E2AEA87A3651CE7BACC04AF66A2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C605F66C41C0602A9E1A6A73CD289F /* Pods-NYCTransit-Widget.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NYCTransit-Widget/Pods-NYCTransit-Widget.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		FC71C31E2668416B9072953D27DC64CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B9AC96D2A588167E2A5CAC9C814CDA6 /* EXWebBrowser.xcconfig */;
@@ -14912,6 +14912,15 @@
 			buildConfigurations = (
 				0C8EDF638DD1FB2BF0D93EA94A84A760 /* Debug */,
 				5D1FACF27EE77A29C8B688E4CC6B2675 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C4534262A5BB10EB2512C6BD565827B /* Build configuration list for PBXNativeTarget "Pods-NYCTransit-Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2072B3294C96FEA45BA23F0EBF266CFD /* Debug */,
+				FC05E2AEA87A3651CE7BACC04AF66A2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -15119,15 +15128,6 @@
 			buildConfigurations = (
 				6D7B41D074083494CD907BE8CBDF2B70 /* Debug */,
 				8651C73DC7E2BC3923E9F2BC605BC82B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8652FD6E271A88B1B7C6D4A3C106850A /* Build configuration list for PBXNativeTarget "Pods-NYCTransit Widget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DCEE55618AE4B252DD972D1025F233E7 /* Debug */,
-				CB31AD32431A4F9FBDAFC6E49070FAA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,6 +11,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		225F0601BF5CCC2B622913D9 /* libPods-NYCTransit-Widget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A77E4650CBFC56346EBB45 /* libPods-NYCTransit-Widget.a */; };
 		3DE4DAD41476765101945408 /* libPods-NYCTransit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FF9D506E70904424FA7E9 /* libPods-NYCTransit.a */; };
 		B0585090244FA75700B40206 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B058508F244FA75700B40206 /* File.swift */; };
 		B0C7680724562E330021721C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01032A0245625950058BD91 /* NotificationCenter.framework */; };
@@ -55,7 +56,10 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B47C5AFCB8BDE514B7D1AC6 /* Pods-NYCTransit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCTransit.debug.xcconfig"; path = "Target Support Files/Pods-NYCTransit/Pods-NYCTransit.debug.xcconfig"; sourceTree = "<group>"; };
 		448BC501FEA376993602A9E7 /* Pods-NYCTransit Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCTransit Widget.release.xcconfig"; path = "Target Support Files/Pods-NYCTransit Widget/Pods-NYCTransit Widget.release.xcconfig"; sourceTree = "<group>"; };
+		4A0C41B9C80758AEF40A5034 /* Pods-NYCTransit-Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCTransit-Widget.debug.xcconfig"; path = "Target Support Files/Pods-NYCTransit-Widget/Pods-NYCTransit-Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		73A77E4650CBFC56346EBB45 /* libPods-NYCTransit-Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYCTransit-Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8069623F370680CBC1D893AC /* libPods-NYCTransit Widget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYCTransit Widget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EDEA82B43DA3C0EE2717F2 /* Pods-NYCTransit-Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCTransit-Widget.release.xcconfig"; path = "Target Support Files/Pods-NYCTransit-Widget/Pods-NYCTransit-Widget.release.xcconfig"; sourceTree = "<group>"; };
 		8AC623DBF3A3E2CB072F81F2 /* Pods-NYCTransit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYCTransit.release.xcconfig"; path = "Target Support Files/Pods-NYCTransit/Pods-NYCTransit.release.xcconfig"; sourceTree = "<group>"; };
 		B01032A0245625950058BD91 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B01032B1245626DE0058BD91 /* NYC-App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "NYC-App.entitlements"; path = "NYCTransit/NYC-App.entitlements"; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C7680724562E330021721C /* NotificationCenter.framework in Frameworks */,
+				225F0601BF5CCC2B622913D9 /* libPods-NYCTransit-Widget.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +121,7 @@
 				D43FF9D506E70904424FA7E9 /* libPods-NYCTransit.a */,
 				B01032A0245625950058BD91 /* NotificationCenter.framework */,
 				8069623F370680CBC1D893AC /* libPods-NYCTransit Widget.a */,
+				73A77E4650CBFC56346EBB45 /* libPods-NYCTransit-Widget.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -127,6 +133,8 @@
 				8AC623DBF3A3E2CB072F81F2 /* Pods-NYCTransit.release.xcconfig */,
 				B0BC9541DFC7FFDF0DF2F8AF /* Pods-NYCTransit Widget.debug.xcconfig */,
 				448BC501FEA376993602A9E7 /* Pods-NYCTransit Widget.release.xcconfig */,
+				4A0C41B9C80758AEF40A5034 /* Pods-NYCTransit-Widget.debug.xcconfig */,
+				81EDEA82B43DA3C0EE2717F2 /* Pods-NYCTransit-Widget.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0C7681224562E330021721C /* Build configuration list for PBXNativeTarget "NYCTransit-Widget" */;
 			buildPhases = (
+				C0192BC147428447A56B5682 /* [CP] Check Pods Manifest.lock */,
 				B0C7680224562E320021721C /* Sources */,
 				B0C7680324562E320021721C /* Frameworks */,
 				B0C7680424562E320021721C /* Resources */,
@@ -340,6 +349,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NYCTransit/Pods-NYCTransit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0192BC147428447A56B5682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYCTransit-Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8BC737F2AD7A05944D9E2A1 /* [CP] Check Pods Manifest.lock */ = {
@@ -594,6 +625,7 @@
 		};
 		B0C7681324562E330021721C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A0C41B9C80758AEF40A5034 /* Pods-NYCTransit-Widget.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -623,6 +655,7 @@
 		};
 		B0C7681424562E330021721C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81EDEA82B43DA3C0EE2717F2 /* Pods-NYCTransit-Widget.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

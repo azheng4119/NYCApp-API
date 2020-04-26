@@ -109,7 +109,7 @@
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>Pods-NYCTransit Widget.xcscheme</key>
+		<key>Pods-NYCTransit-Widget.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
