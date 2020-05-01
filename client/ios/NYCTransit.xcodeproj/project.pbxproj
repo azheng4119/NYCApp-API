@@ -18,6 +18,7 @@
 		B0C7680A24562E330021721C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C7680924562E330021721C /* TodayViewController.swift */; };
 		B0C7680D24562E330021721C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C7680B24562E330021721C /* MainInterface.storyboard */; };
 		B0C7681124562E330021721C /* NYCTransit-Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0C7680624562E320021721C /* NYCTransit-Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B0EFA7DB245B79E000125705 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C7680D24562E330021721C /* MainInterface.storyboard in Resources */,
+				B0EFA7DB245B79E000125705 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

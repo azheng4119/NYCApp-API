@@ -49,11 +49,12 @@ export const Favorites = ({ navigation }) => {
                     }
                     else {
                         // let allTrainImages = [];
-                        // for (let train of station["dayTimeRoutes"].split(' ')) {
-                        //     allTrainImages.push(
-                        //         <Image key={train} source={Images[train]} style={styles.Avatar} />
-                        //     )
+                        // for (let train in station["dayTimeRoutes"].split(' ')) {
+                        //   allTrainImages.push(
+                        //     <Image key={train} source={Images[station["dayTimeRoutes"].split(' ')[train]]} style={styles.Avatar} />
+                        //   )
                         // }
+                        console.log(station)
                         return (
                             <ListItem
                                 onPress={() => {
