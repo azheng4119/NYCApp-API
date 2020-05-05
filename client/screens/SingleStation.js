@@ -4,6 +4,7 @@ import { ListItem, Button } from 'react-native-elements';
 import axios from 'axios';
 import Images from '../assets/images';
 import { AsyncStorage } from 'react-native';
+import { Icon } from 'react-native-elements'
 
 export default function SingleStation({
 	navigation,
@@ -14,10 +15,8 @@ export default function SingleStation({
 
 
 	const getFavorites = async () => {
-		console.log(favorite)
 		try {
-			const value = await AsyncStorage.getItem(`&${route.params ?.station}`)
-			console.log(value);
+			const value = await AsyncStorage.getItem(`&${route.params?.station}`)
 			if (value !== null) {
 				setFavorite(true);
 			} else {
@@ -30,7 +29,7 @@ export default function SingleStation({
 
 	const saveFavorite = async () => {
 		try {
-			await AsyncStorage.setItem(`&${route.params ?.station}`, `${route.params ?.station}`)
+			await AsyncStorage.setItem(`&${route.params?.station}`, `${route.params?.station}`)
 			setFavorite(true);
 		} catch (e) {
 			// saving error
@@ -39,7 +38,7 @@ export default function SingleStation({
 
 	const deleteFavorite = async () => {
 		try {
-			await AsyncStorage.removeItem(`&${route.params ?.station}`);
+			await AsyncStorage.removeItem(`&${route.params?.station}`);
 			setFavorite(false);
 		} catch (e) {
 			// saving error
@@ -55,31 +54,27 @@ export default function SingleStation({
 		}
 	}
 	useEffect(() => {
-		navigation.setOptions({ title: route.params ?.station });
+		navigation.setOptions({ title: route.params?.station });
 		getTrainTimes();
 		getFavorites();
-	}, [route.params ?.station]);
+	}, [route.params?.station]);
 
 	const getTrainTimes = async () => {
-		let { data } = await axios.get(`http://node-express-env.hfrpwhjwwy.us-east-2.elasticbeanstalk.com/trains/${route.params ?.station}`);
+		let { data } = await axios.get(`http://node-express-env.hfrpwhjwwy.us-east-2.elasticbeanstalk.com/trains/${route.params?.station}`);
 		setData(data);
 	}
 
 	return (
 		<ScrollView>
-			<TouchableOpacity
+			<TouchableOpacity style={{ margin: 15 }}
 				onPress={() => handleClick()}>
-				<Text
-					style={{ margin: 15 }}
-				>
-					{favorite ?  "Unfavorite" : "Set Favorite"}
-				</Text>
+				<Icon name={favorite ? "favorite" : "favorite-border"} />
 			</TouchableOpacity>
 			{['Uptown', 'Downtown'].map(side => {
 				const bound = side === 'Uptown' ? 'North' : 'South';
-				return <ScrollView 
-				style={styles.Container}
-				key={side}
+				return <ScrollView
+					style={styles.Container}
+					key={side}
 				>
 					<ListItem
 						title={side}
@@ -122,8 +117,8 @@ const styles = StyleSheet.create({
 		height: 45,
 		width: 45,
 	},
-	RightSub : {
-		textAlign : 'right'
+	RightSub: {
+		textAlign: 'right'
 	}
 });
 
