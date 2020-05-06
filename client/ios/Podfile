@@ -42,6 +42,7 @@ target 'NYCTransit' do
   pod 'react-native-maps', :path => '../node_modules/react-native-maps'
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
+  pod 'RNFastImage', :path => '../node_modules/react-native-fast-image'
 
   # Automatically detect installed unimodules
   use_unimodules!
