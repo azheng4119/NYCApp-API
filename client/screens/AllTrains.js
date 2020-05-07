@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Image, StyleSheet, ScrollView } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import Images from '../assets/images';
+import FastImage from 'react-native-fast-image';
 
 export default function AllTrains({
 	navigation,
@@ -15,7 +16,7 @@ export default function AllTrains({
 				<ListItem
 					onPress={() => navigation.navigate('SingleTrain', { train, title: train })}
 					key={i}
-					leftAvatar={<Image source={Images[train]} style={styles.Avatar} />}
+					leftAvatar={<FastImage source={Images[train]} style={styles.Avatar} />}
 					bottomDivider
 					chevron
 				/>

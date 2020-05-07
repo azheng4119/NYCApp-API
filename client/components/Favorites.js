@@ -4,16 +4,26 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button, Scro
 import { ListItem } from 'react-native-elements';
 import Loading from '../components/Loading';
 import Images from '../assets/images';
+import FastImage from 'react-native-fast-image';
 
 export const Favorites = ({ navigation }) => {
 
     const [favorites, setFavorites] = useState([]);
+    const [train, setTrains] = useState([]);
 
     const getFavorites = async () => {
         try {
             const value = await AsyncStorage.getAllKeys();
             if (value !== null) {
-                return setFavorites(value.map(station => station.includes('&') ? station.substring(1) : ''));
+                console.log(value)
+                let allDayTimeTrains = [];
+                setFavorites(value.map(station => station.split(',')[0].includes('&') ? station.split(',')[0].substring(1) : ''));
+                for (let station in value) {
+                    let keyPair = await AsyncStorage.getItem(`${value[station]}`);
+                    allDayTimeTrains[station] = keyPair.split(',');
+                }
+                console.log(allDayTimeTrains)
+                setTrains(allDayTimeTrains);
             } else {
                 return ['No Favorites set'];
             }
@@ -43,28 +53,30 @@ export const Favorites = ({ navigation }) => {
                 favorites.map((station, i) => {
                     if (station === 'No Favorites set') {
                         return <ListItem
-                            key={i}
+                            key={Math.random()}
                             title={station}
                         />
                     }
                     else {
-                        // let allTrainImages = [];
-                        // for (let train in station["dayTimeRoutes"].split(' ')) {
-                        //   allTrainImages.push(
-                        //     <Image key={train} source={Images[station["dayTimeRoutes"].split(' ')[train]]} style={styles.Avatar} />
-                        //   )
-                        // }
-                        console.log(station)
+                        let allTrainImages = [];
+                        console.log(train[i])
+                        if (train.length > 0) {
+                            for (let index = 1; index < train[i].length; index++) {
+                                allTrainImages.push(
+                                    <FastImage key={Math.random()} source={Images[train[i][index]]} style={styles.Avatar} />
+                                )
+                            }
+                        }
                         return (
                             <ListItem
                                 onPress={() => {
                                     navigation.navigate('Single', { station: station })
                                 }
                                 }
-                                key={i}
+                                key={Math.random()}
                                 leftAvatar={
                                     <View style={styles.ListItem}>
-                                        {/* {allTrainImages} */}
+                                        {allTrainImages}
                                     </View>
                                 }
                                 title={station}

@@ -7,6 +7,7 @@ import Images from '../assets/images';
 import Loading from '../components/Loading';
 import { Favorites } from '../components/Favorites';
 import Geolocation from '@react-native-community/geolocation';
+import FastImage from 'react-native-fast-image';
 
 export default function HomeScreen({
   navigation
@@ -31,15 +32,15 @@ export default function HomeScreen({
   const getNearBy = async () => {
     try {
       await Geolocation.getCurrentPosition(
-				position => {
-					const initialPosition = JSON.stringify(position);
-					const location = JSON.parse(initialPosition);
-					const currLoc = { latitude: location[`coords`][`latitude`], longitude: location[`coords`][`longitude`] };
-					searchOnCoords(currLoc);
-				},
-				error => Alert.alert('Error', JSON.stringify(error)),
-				{enableHighAccuracy: true, timeout: 20000, maximumAge: 1000},
-			  );
+        position => {
+          const initialPosition = JSON.stringify(position);
+          const location = JSON.parse(initialPosition);
+          const currLoc = { latitude: location[`coords`][`latitude`], longitude: location[`coords`][`longitude`] };
+          searchOnCoords(currLoc);
+        },
+        error => Alert.alert('Error', JSON.stringify(error)),
+        { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+      );
     } catch (err) {
       console.log(err)
     }
@@ -68,13 +69,13 @@ export default function HomeScreen({
               let allTrainImages = [];
               for (let train in station["dayTimeRoutes"].split(' ')) {
                 allTrainImages.push(
-                  <Image key={train} source={Images[station["dayTimeRoutes"].split(' ')[train]]} style={styles.Avatar} />
+                  <FastImage key={train} source={Images[station["dayTimeRoutes"].split(' ')[train]]} style={styles.Avatar}/>
                 )
               }
               return (
                 <ListItem
                   onPress={() =>
-                    navigation.navigate('Single', { station: station["stopName"] } )}
+                    navigation.navigate('Single', { station: station["stopName"] })}
                   key={i}
                   leftAvatar={
                     <View style={styles.ListItem}>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import Images from '../assets/images';
 import { AsyncStorage } from 'react-native';
 import { Icon } from 'react-native-elements'
+import FastImage from 'react-native-fast-image';
 
 export default function SingleStation({
 	navigation,
@@ -12,11 +13,13 @@ export default function SingleStation({
 }) {
 	const [favorite, setFavorite] = useState(false);
 	const [data, setData] = useState([]);
+	const [dayTimeRoutes, setDayTimeRoutes] = useState([]);
 
 
 	const getFavorites = async () => {
 		try {
 			const value = await AsyncStorage.getItem(`&${route.params?.station}`)
+			console.log(value)
 			if (value !== null) {
 				setFavorite(true);
 			} else {
@@ -28,8 +31,10 @@ export default function SingleStation({
 	}
 
 	const saveFavorite = async () => {
+		console.log(dayTimeRoutes)
+		console.log(`${route.params?.station},${dayTimeRoutes.toString()}`)
 		try {
-			await AsyncStorage.setItem(`&${route.params?.station}`, `${route.params?.station}`)
+			await AsyncStorage.setItem(`&${route.params?.station}`, `${route.params?.station},${dayTimeRoutes.toString()}`)
 			setFavorite(true);
 		} catch (e) {
 			// saving error
@@ -63,6 +68,12 @@ export default function SingleStation({
 	const getTrainTimes = async () => {
 		let { data } = await axios.get(`http://node-express-env.hfrpwhjwwy.us-east-2.elasticbeanstalk.com/trains/${route.params?.station}`);
 		setData(data);
+		let routes = [];
+		for(let route in data){
+			console.log(data[route].TrainNumber)
+			routes = [...routes, data[route].TrainNumber]
+		}
+		setDayTimeRoutes(routes)
 	}
 
 	return (
@@ -91,7 +102,7 @@ export default function SingleStation({
 							return (
 								<ListItem
 									key={i}
-									leftAvatar={<Image source={Images[train["TrainNumber"]]} style={styles.Avatar} />}
+									leftAvatar={<FastImage source={Images[train["TrainNumber"]]} style={styles.Avatar} />}
 									rightElement={<Text style={styles.RightSub}>{`${nextTrain} \n ${futureTrain}`}</Text>}
 									bottomDivider
 								/>
