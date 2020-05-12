@@ -59,9 +59,8 @@ export const Favorites = ({ navigation }) => {
                     }
                     else {
                         let allTrainImages = [];
-                        console.log(train[i])
-                        if (train.length > 0) {
-                            for (let index = 1; index < train[i].length; index++) {
+                        for (let index in train[i]) {
+                            if (index > 0) {
                                 allTrainImages.push(
                                     <FastImage key={Math.random()} source={Images[train[i][index]]} style={styles.Avatar} />
                                 )
